@@ -29,12 +29,12 @@
 
         <!--应用出入口与外部集成-->
         <dependency>
-            <groupId>com.dfocus.jm.sync</groupId>
-            <artifactId>entrance</artifactId>
+            <groupId>${groupId}</groupId>
+            <artifactId>${rootArtifactId}.entrance</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.dfocus.jm.sync</groupId>
-            <artifactId>integration</artifactId>
+            <groupId>${groupId}</groupId>
+            <artifactId>${rootArtifactId}.integration</artifactId>
         </dependency>
 
         <!--数据库相关-->

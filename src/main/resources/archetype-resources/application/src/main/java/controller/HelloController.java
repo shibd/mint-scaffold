@@ -1,4 +1,4 @@
-package ${package}.web.demo.controller;
+package ${package}.controller;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

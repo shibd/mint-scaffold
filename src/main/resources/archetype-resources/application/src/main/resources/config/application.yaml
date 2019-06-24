@@ -1,9 +1,10 @@
 ## app
 spring:
   application.name: ${projectName}
+  output.ansi.enabled: always
 server:
   port: 8080
-  servlet.context-path: ${projectName}
+  servlet.context-path: /${projectName}
 
 ## log
 logging:
