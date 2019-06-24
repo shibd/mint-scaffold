@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
+<generatorConfiguration>
+
+    <!-- Note that you have to specify the driver place here. The tool does
+        not appear to use the Eclipse classpath or the project classpath -->
+
+    <context id="context" targetRuntime="MyBatis3">
+
+        <!--注释控制-->
+        <commentGenerator>
+            <property name="suppressDate" value="true"/>
+            <property name="suppressAllComments" value="true"/>
+        </commentGenerator>
+
+        <!-- Where to pull the data from -->
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://139.217.225.220:3306/dm-sync?autoCommit=true" userId="root"
+                        password="dfocus@dm"/>
+
+        <!-- Note that the targetProject refers to the name of the project in your
+            Eclipse IDE (not the name of the Maven project). If run outside of the IDE
+            you can specify a path instead, but there doesn't seem to be a nice way to
+            specify a single path for both usage scenarios. -->
+
+        <!-- Generates the model (the objects that hold the data) -->
+        <javaModelGenerator targetPackage="${package}.model.po.auto" targetProject="./src/main/java"/>
+        <!-- sql map -->
+        <sqlMapGenerator targetPackage="mapper" targetProject="./src/main/resources">
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+        <!-- Generates the interfaces used to retrieve data -->
+        <javaClientGenerator targetPackage="${package}.dao"
+                             targetProject="./src/main/java"
+                             type="XMLMAPPER"/>
+
+        <!-- table -->
+        <table tableName="sys_config">
+            <columnOverride column="sync_type" javaType="java.lang.Integer"/>
+            <columnOverride column="enable" javaType="java.lang.Integer"/>
+        </table>
+        <table tableName="space_info">
+        </table>
+
+    </context>
+</generatorConfiguration>

@@ -1,0 +1,49 @@
+## app
+spring:
+  application.name: ${projectName}
+server:
+  port: 8080
+  servlet.context-path: ${projectName}
+
+## log
+logging:
+  level:
+    root: info
+
+## 数据库
+spring.datasource:
+  driver-class-name: org.h2.Driver
+  url: jdbc:h2:mem:h2test;DB_CLOSE_DELAY=-1;DB_CLOSE_ON_EXIT=FALSE
+  platform: h2
+  username: sa
+  password:
+  type: com.zaxxer.hikari.HikariDataSource
+  hikari:
+      connectionTimeout: 30000
+      idleTimeout: 30000
+      maxLifetime: 2000000
+      maximumPoolSize: 20
+      minimumIdle: 5
+      poolName: DF_CONN_POOL
+mybatis:
+  #Mapper.xml所在的位置
+  mapper-locations: classpath:mapper/*.xml
+## flyway
+spring.flyway.locations: classpath:/db
+
+## kafka
+#sync.topic: sync
+#spring.kafka:
+#  bootstrap-servers: 139.217.99.53:9092
+#  producer:
+#    acks: -1
+#    retries: 100
+#    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+#    value-serializer: org.apache.kafka.common.serialization.StringSerializer
+#  consumer:
+#    group-id: jm-sync
+#    enable-auto-commit: true
+#    auto-commit-interval: 100
+#    key-deserializer: org.apache.kafka.transfer.serialization.StringDeserializer
+#    value-deserializer: org.apache.kafka.transfer.serialization.ByteArrayDeserializer
+#    auto-offset-reset: earliest
