@@ -1,6 +1,5 @@
 package ${package}.web.demo.controller;
 
-import com.dfocus.jm.sync.service.SysConfigService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
@@ -19,9 +18,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/hello")
 @Slf4j
 public class HelloController {
-
-    @Autowired
-    SysConfigService sysConfigService;
 
     @ApiOperation("接口: 测试接口")
     @RequestMapping(method = RequestMethod.GET)
