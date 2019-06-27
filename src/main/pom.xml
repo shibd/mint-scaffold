@@ -16,22 +16,15 @@
 
 
     <properties>
-        <spring.web.version>5.0.5.RELEASE</spring.web.version>
         <spring.cloud.version>Finchley.RELEASE</spring.cloud.version>
         <spring.cloud.openfeign.version>2.0.0.RELEASE</spring.cloud.openfeign.version>
         <fastjson.version>1.2.4</fastjson.version>
-        <guava.version>17.0</guava.version>
+        <guava.version>18.0</guava.version>
         <mybatis.starter.version>1.3.1</mybatis.starter.version>
         <swagger.version>2.6.1</swagger.version>
-
+        <entrance.version>${version}</entrance.version>
         <aplication.version>${version}</aplication.version>
-        <service.version>${version}</service.version>
-        <manager.version>${version}</manager.version>
-        <common.version>${version}</common.version>
         <integration.version>${version}</integration.version>
-        <facade.api.version>${version}</facade.api.version>
-        <facade.impl.version>${version}</facade.impl.version>
-
     </properties>
 
     <dependencyManagement>
@@ -44,35 +37,14 @@
             </dependency>
             <dependency>
                 <groupId>${groupId}</groupId>
-                <artifactId>${artifactId}.service</artifactId>
-                <version>${service.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}</groupId>
-                <artifactId>${artifactId}.manager</artifactId>
-                <version>${manager.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}</groupId>
-                <artifactId>${artifactId}.common</artifactId>
-                <version>${common.version}</version>
+                <artifactId>${artifactId}.entrance</artifactId>
+                <version>${entrance.version}</version>
             </dependency>
             <dependency>
                 <groupId>${groupId}</groupId>
                 <artifactId>${artifactId}.integration</artifactId>
                 <version>${integration.version}</version>
             </dependency>
-            <dependency>
-                <groupId>${groupId}</groupId>
-                <artifactId>${artifactId}.facade.api</artifactId>
-                <version>${facade.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}</groupId>
-                <artifactId>${artifactId}.facade.impl</artifactId>
-                <version>${facade.impl.version}</version>
-            </dependency>
-
 
             <!--spring cloud-->
             <dependency>
@@ -86,11 +58,6 @@
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-openfeign</artifactId>
                 <version>${spring.cloud.openfeign.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-web</artifactId>
-                <version>${spring.web.version}</version>
             </dependency>
 
             <!--工具包-->
@@ -111,7 +78,6 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.starter.version}</version>
             </dependency>
-
             <!--接口文档-->
             <dependency>
                 <groupId>io.springfox</groupId>
@@ -123,7 +89,7 @@
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
             </dependency>
-
         </dependencies>
     </dependencyManagement>
+
 </project>

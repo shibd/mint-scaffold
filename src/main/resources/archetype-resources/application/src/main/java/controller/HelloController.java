@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController;
 @Api("接口: 测试")
 @RestController
 @RequestMapping("/hello")
-@Slf4j
 public class HelloController {
 
     @ApiOperation("接口: 测试接口")

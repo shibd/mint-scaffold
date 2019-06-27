@@ -16,8 +16,8 @@
 
         <!-- Where to pull the data from -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="jdbc:mysql://139.217.225.220:3306/dm-sync?autoCommit=true" userId="root"
-                        password="dfocus@dm"/>
+                        connectionURL="" userId=""
+                        password=""/>
 
         <!-- Note that the targetProject refers to the name of the project in your
             Eclipse IDE (not the name of the Maven project). If run outside of the IDE
@@ -25,22 +25,18 @@
             specify a single path for both usage scenarios. -->
 
         <!-- Generates the model (the objects that hold the data) -->
-        <javaModelGenerator targetPackage="${package}.model.po.auto" targetProject="./src/main/java"/>
+        <javaModelGenerator targetPackage="${package}.common.model.po.auto" targetProject="./src/main/java"/>
         <!-- sql map -->
-        <sqlMapGenerator targetPackage="mapper" targetProject="./src/main/resources">
+        <sqlMapGenerator targetPackage="mapper.auto" targetProject="./src/main/resources">
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!-- Generates the interfaces used to retrieve data -->
-        <javaClientGenerator targetPackage="${package}.dao"
+        <javaClientGenerator targetPackage="${package}.common.dao"
                              targetProject="./src/main/java"
                              type="XMLMAPPER"/>
 
         <!-- table -->
-        <table tableName="sys_config">
-            <columnOverride column="sync_type" javaType="java.lang.Integer"/>
-            <columnOverride column="enable" javaType="java.lang.Integer"/>
-        </table>
-        <table tableName="space_info">
+        <table tableName="user">
         </table>
 
     </context>

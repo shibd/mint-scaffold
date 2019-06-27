@@ -6,10 +6,10 @@
     <parent>
         <groupId>${groupId}</groupId>
         <artifactId>${rootArtifactId}</artifactId>
-        <version>${version}</version>
+        <version>0.0.1</version>
     </parent>
 
-    <artifactId>${artifactId}</artifactId>
+    <artifactId>${rootArtifactId}.integration</artifactId>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -18,12 +18,10 @@
     </properties>
 
     <dependencies>
-
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-openfeign</artifactId>
         </dependency>
-
     </dependencies>
 
 </project>

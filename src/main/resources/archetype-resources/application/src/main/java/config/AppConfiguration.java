@@ -16,8 +16,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 @Configuration
 public class AppConfiguration {
 
-
-    final static String DAO_PACKAGE          = "${package}.dao";
+    final static String DAO_PACKAGE          = "${package}.common.dao";
     final static String INTERGRATION_PACKAGE = "${package}.intergration";
 
     /**

@@ -1,1 +1,0 @@
-INSERT INTO user (id, account, password, nickName) VALUES (1, 'test1', '123456Aa', 'test1');

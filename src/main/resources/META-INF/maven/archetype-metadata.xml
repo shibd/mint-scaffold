@@ -2,7 +2,7 @@
 <archetype-descriptor name="servicearchetype">
     <requiredProperties>
         <requiredProperty key="projectName">
-            <defaultValue>${artifactId.replaceAll("[^0-9A-z]", "")}</defaultValue>
+            <defaultValue>${artifactId}</defaultValue>
         </requiredProperty>
         <requiredProperty key="classPrefix">
             <defaultValue>${artifactId.replaceAll("[^0-9A-z]", "").substring(0, 1).toUpperCase()}${artifactId.replaceAll("[^0-9A-z]", "").substring(1)}</defaultValue>
@@ -62,7 +62,7 @@
             </fileSets>
         </module>
 
-        <module id="${rootArtifactId}.entrance" dir="entrance" name="${rootArtifactId}.entrance">
+        <module id="${rootArtifactId}.common" dir="common" name="${rootArtifactId}.common">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8" packaged="true">
                     <directory>src/main/java</directory>
@@ -85,6 +85,55 @@
                 </fileSet>
             </fileSets>
         </module>
+
+        <module id="${rootArtifactId}.facade.api" dir="facade.api" name="${rootArtifactId}.facade.api">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                        <include>**/*.txt</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8" packaged="false">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
+        <module id="${rootArtifactId}.facade.impl" dir="facade.impl" name="${rootArtifactId}.facade.impl">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                        <include>**/*.txt</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8" packaged="false">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+
 
         <module id="${rootArtifactId}.integration" dir="integration" name="${rootArtifactId}.integration">
             <fileSets>
@@ -110,5 +159,51 @@
             </fileSets>
         </module>
 
+        <module id="${rootArtifactId}.manager" dir="manager" name="${rootArtifactId}.manager">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                        <include>**/*.txt</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8" packaged="false">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}.service" dir="service" name="${rootArtifactId}.service">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8" packaged="true">
+                    <directory>src/main/java</directory>
+                    <includes>
+                        <include>**/*.java</include>
+                        <include>**/*.txt</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8" packaged="false">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>**/*.*</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory></directory>
+                    <includes>
+                        <include>pom.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
     </modules>
 </archetype-descriptor>  
