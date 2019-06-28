@@ -21,6 +21,10 @@
             <groupId>${groupId}</groupId>
             <artifactId>${rootArtifactId}.integration</artifactId>
         </dependency>
+        <dependency>
+            <groupId>${groupId}</groupId>
+            <artifactId>${rootArtifactId}.facade.api</artifactId>
+        </dependency>
     </dependencies>
 
 
