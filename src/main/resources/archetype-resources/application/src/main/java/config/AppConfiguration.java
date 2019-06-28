@@ -11,6 +11,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @Date: 2019/6/23 17:28
  * @Description:
  */
+@EnableSwagger2
 @MapperScan(AppConfiguration.DAO_PACKAGE)
 @EnableFeignClients(AppConfiguration.INTERGRATION_PACKAGE)
 @Configuration
