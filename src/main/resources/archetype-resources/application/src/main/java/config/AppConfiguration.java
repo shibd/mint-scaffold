@@ -17,7 +17,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 public class AppConfiguration {
 
     final static String DAO_PACKAGE          = "${package}.common.dao";
-    final static String INTERGRATION_PACKAGE = "${package}.intergration";
+    final static String INTERGRATION_PACKAGE = "${package}.integration";
 
     /**
      * 调度提出配置,可以开关控制开启
