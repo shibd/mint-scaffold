@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2019/6/11 10:05
  * @Description:
  */
-@RestController
 @RequestMapping("/facade/user")
 public interface UserFacade {
     @RequestMapping(method = RequestMethod.POST)
