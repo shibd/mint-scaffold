@@ -32,6 +32,7 @@
         <facade.api.version>${version}</facade.api.version>
         <facade.impl.version>${version}</facade.impl.version>
 
+        <mint.web.version>1.0</mint.web.version>
     </properties>
 
     <dependencyManagement>
@@ -122,6 +123,13 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
+            </dependency>
+
+            <!--dfocus-->
+            <dependency>
+                <groupId>com.dfocus.mint</groupId>
+                <artifactId>mint-web</artifactId>
+                <version>${mint.web.version}</version>
             </dependency>
 
         </dependencies>
