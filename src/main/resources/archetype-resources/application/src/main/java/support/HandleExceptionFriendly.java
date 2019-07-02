@@ -3,7 +3,7 @@ package ${package}.support;
 import ${package}.service.common.constant.ResultCode;
 import ${package}.service.common.exception.BizException;
 import ${package}.service.common.exception.SystemRuntimeException;
-import ${package}.vo.base.Response;
+import com.dfocus.mint.web.rsp.Response;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.BindException;
