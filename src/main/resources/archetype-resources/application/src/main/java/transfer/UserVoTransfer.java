@@ -17,4 +17,12 @@ public abstract class UserVoTransfer {
         userDto.setNickName(userVo.getNickName());
         return userDto;
     }
+
+    public static UserVo dtoToVo(UserDto userDto) {
+        UserVo  userVo  = new UserVo ();
+        userVo.setAccount(userDto.getAccount());
+        userVo.setPassword(userDto.getPassword());
+        userVo.setNickName(userDto.getNickName());
+        return userVo;
+    }
 }
