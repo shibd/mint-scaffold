@@ -1,0 +1,5 @@
+#!/bin/sh
+
+cd ..
+mvn deploy -pl facade.api -am
+
