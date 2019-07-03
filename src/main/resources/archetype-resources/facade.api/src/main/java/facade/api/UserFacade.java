@@ -1,10 +1,13 @@
 package ${package}.facade.api;
 
 import ${package}.facade.model.UserFaReq;
+import com.dfocus.mint.web.rsp.Response;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
 
 /**
  * @Auther: baozi
@@ -14,5 +17,5 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/facade/user")
 public interface UserFacade {
     @RequestMapping(method = RequestMethod.POST)
-    boolean createUser(@RequestBody UserFaReq userFaReq);
+    Response<List<UserFaReq>> testUser(@RequestBody UserFaReq userFaReq);
 }
