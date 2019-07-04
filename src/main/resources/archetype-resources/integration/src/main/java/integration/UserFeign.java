@@ -1,6 +1,6 @@
-//package ${package}.integration;
+//package com.dfocus.baozi.integration;
 //
-//import ${package}.entrance.api.UserApi;
+//import com.dfocus.xxx.facade.api.UserFacade;
 //import org.springframework.cloud.openfeign.FeignClient;
 //
 ///**
@@ -8,6 +8,7 @@
 // * @Date: 2019/6/25 11:33
 // * @Description:
 // */
-//@FeignClient(name = "provider", url = "${${projectName}.url}")
-//public interface UserFeign extends UserApi {
+//@FeignClient(name = "provider", url = "${XXX.url}")
+//public interface UserFeign extends UserFacade {
+//
 //}

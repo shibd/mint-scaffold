@@ -21,7 +21,7 @@ public class HandleExceptionFriendly {
     @ExceptionHandler(BizException.class)
     public Response<Void> bizException(BizException ex) {
         log.error("接口发生业务异常", ex);
-        return Response.error(ex.getStatus(), ex.getMsg());
+        return Response.error(ex.getStatus(), ex.getMessage());
     }
 
     @ExceptionHandler(SystemRuntimeException.class)
@@ -29,7 +29,7 @@ public class HandleExceptionFriendly {
     public Response<Void> internalException(SystemRuntimeException ex) {
         log.error("系统内部出现异常", ex);
         return Response.error(
-                ResultCode.UNKNOWN_ERROR.getCode(), ResultCode.UNKNOWN_ERROR.getMsg());
+                ResultCode.SYS_ERROR.getCode(), ResultCode.SYS_ERROR.getMsg());
     }
 
     @ExceptionHandler(BindException.class)

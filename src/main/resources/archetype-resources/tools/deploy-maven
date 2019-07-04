@@ -1,5 +1,5 @@
 #!/bin/sh
-
-cd ..
+basepath=$(cd `dirname $0`; pwd)
+cd $basepath/../
 mvn deploy -pl facade.api -am
 

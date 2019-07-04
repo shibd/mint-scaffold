@@ -8,6 +8,8 @@ import ${package}.vo.user.UserVo;
 import com.dfocus.mint.web.rsp.Response;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -43,6 +45,13 @@ public class UserController {
         List<UserDto> users = userService.getUsers(searchUser);
         users.forEach(userDto -> userVos.add(UserVoTransfer.dtoToVo(userDto)));
         return Response.success(userVos);
+    }
+
+    @ApiOperation("接口: 分页列表")
+    @RequestMapping(method = RequestMethod.GET, value = "/users")
+    Response<Page<UserVo>> list(Pageable pageable) {
+        Page<UserDto> users = userService.listUsers(pageable);
+        return Response.success(users.map(UserVoTransfer::dtoToVo));
     }
 
 }

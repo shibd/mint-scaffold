@@ -5,6 +5,8 @@ import ${package}.facade.model.UserFaReq;
 import ${package}.facade.transfer.UserFaTransfer;
 import ${package}.service.atom.UserService;
 import ${package}.service.dto.user.UserDto;
+import ${package}.service.common.exception.BizException;
+import ${package}.service.common.constant.ResultCode;
 import com.dfocus.mint.web.rsp.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -38,6 +40,10 @@ public class UserFacadeImpl implements UserFacade {
         userFaReqs.add(userFaReq);
         userFaReqs.add(userFaReq1);
         userFaReqs.add(userFaReq2);
-        return Response.success(userFaReqs);
+
+        // 有问题可以直接抛出异常
+        throw new BizException(ResultCode.SYS_ERROR);
+        // 可以直接返回
+        // return Response.success(userFaReqs);
     }
 }

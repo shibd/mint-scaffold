@@ -6,7 +6,7 @@ import lombok.Getter;
 public enum ResultCode {
     SUCCESS(0, "请求成功"),
     UNAVAILABLE_SERVICE(19997, "系统繁忙请稍后再试"),
-    UNKNOWN_ERROR(19998, "网络繁忙"),
+    UNKNOWN_ERROR(19998, "未知异常"),
     ERROR_INPUT_PARAMS(20006, "输入参数错误"),
     SYS_ERROR(20007, "系统异常"),
     ;

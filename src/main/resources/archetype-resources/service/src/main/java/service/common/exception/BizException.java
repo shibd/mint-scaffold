@@ -14,15 +14,18 @@ import lombok.ToString;
 @ToString
 public class BizException extends RuntimeException {
     private int status;
-    private String msg;
+
+    public BizException(String msg) {
+        super(msg);
+    }
 
     public BizException(int status, String msg) {
+        this(msg);
         this.status = status;
-        this.msg = msg;
     }
 
     public BizException(ResultCode error) {
+        this(error.getMsg());
         this.status = error.getCode();
-        this.msg = error.getMsg();
     }
 }

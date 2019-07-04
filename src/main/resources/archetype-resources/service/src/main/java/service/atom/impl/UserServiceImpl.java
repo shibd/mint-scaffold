@@ -9,7 +9,8 @@ import ${package}.service.dto.user.UserDto;
 import ${package}.service.transfer.UserDtoTransfer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -42,5 +43,10 @@ public class UserServiceImpl implements UserService {
         List<User> users = userDao.selectByExample(userExample);
         users.forEach(user -> userDtos.add(UserDtoTransfer.poTransDto(user)));
         return userDtos;
+    }
+
+    @Override
+    public Page<UserDto> listUsers(Pageable pageable) {
+        return null;
     }
 }
