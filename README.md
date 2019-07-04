@@ -1,5 +1,6 @@
 # mint-scaffold
 Spring Boot快速开发脚手架
+
 相关文档请移步：https://dfocus.yuque.com/research-development/dr0yl5/sskkhu/edit
 
 # 快速入门
