@@ -18,8 +18,14 @@ mybatis:
 
 ## flyway
 spring:
+  h2:
+    console:
+      path: /h2-console
+      enabled: true
+      settings:
+        web-allow-others: true
   flyway:
-    enabled: false
+    enabled: true
     locations: classpath:/db
 
 

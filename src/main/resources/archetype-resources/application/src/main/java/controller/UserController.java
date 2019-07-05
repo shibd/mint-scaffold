@@ -39,7 +39,7 @@ public class UserController {
     }
 
     @ApiOperation("接口: 搜索用户")
-    @RequestMapping(method = RequestMethod.GET, value = "/users/search")
+    @RequestMapping(method = RequestMethod.POST, value = "/users/search")
     Response<List<UserVo>> getUsers(@RequestBody SearchUser searchUser) {
         List<UserVo> userVos = new ArrayList<>();
         List<UserDto> users = userService.getUsers(searchUser);
