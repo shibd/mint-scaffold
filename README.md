@@ -19,11 +19,16 @@ mvn -e archetype:generate \
 
 # 版本Release
 
-## 2.0-SNAPSHOT版本 - doing
+## 3.1-SNAPSHOT版本 - doing
 - 引入mybatis-plus
 - 微服务打通注册中心
 - 引入XXJob
 - ...
+
+## 3.0
+- 集成统一脚本
+- 完善接口测试
+- 完善单元测试流程
 
 ## [2.0](https://gitlab.dfocus.co/frameworks/mint-scaffold/tags/2.0)
 - 调整包结构
