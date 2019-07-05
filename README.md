@@ -25,7 +25,7 @@ mvn -e archetype:generate \
 - 引入XXJob
 - ...
 
-## 3.0
+## [3.0](https://gitlab.dfocus.co/frameworks/mint-scaffold/tags/3.0)
 - 集成统一脚本
 - 完善接口测试
 - 完善单元测试流程
