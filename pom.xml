@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.dfocus.archetypes</groupId>
     <artifactId>mint-scaffold</artifactId>
-    <version>3.0</version>
+    <version>3.1-SNAPSHOST</version>
     <name>mint spring boot multi module project archetype</name>
 
     <build>
