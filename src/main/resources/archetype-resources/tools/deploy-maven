@@ -4,8 +4,6 @@
 
 set -e
 
-basepath=$(cd `dirname $0`; pwd)
-cd $basepath/../
+cd `dirname $0`/../
 
 mvn deploy -pl facade.api -am
-

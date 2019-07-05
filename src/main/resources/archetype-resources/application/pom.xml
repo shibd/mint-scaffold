@@ -50,6 +50,7 @@
     </dependencies>
 
     <build>
+        <finalName>${projectName}.application</finalName>
         <plugins>
             <!-- spring boot package-->
             <plugin>

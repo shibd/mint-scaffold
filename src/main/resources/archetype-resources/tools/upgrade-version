@@ -12,8 +12,7 @@ then
 fi
 
 # 回到工程目录
-basepath=$(cd `dirname $0`; pwd)
-cd $basepath/../
+cd `dirname $0`/../common
 
 version=$1
 mvn -DnewVersion=${version} -DgenerateBackupPoms=false  versions:set

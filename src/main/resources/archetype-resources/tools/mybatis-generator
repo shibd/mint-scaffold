@@ -5,8 +5,7 @@
 set -e
 
 # 回到common工程目录
-basepath=$(cd `dirname $0`; pwd)
-cd $basepath/../common
+cd `dirname $0`/../common
 
 mvn mybatis-generator:generate
 ## 覆盖原来mapper,po,example. 但不会覆盖xml文件,xml会追加
