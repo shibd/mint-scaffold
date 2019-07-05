@@ -1,5 +1,11 @@
 #!/bin/sh
+
+# 发布facade.api到maven私有仓库
+
+set -e
+
 basepath=$(cd `dirname $0`; pwd)
 cd $basepath/../
+
 mvn deploy -pl facade.api -am
 
