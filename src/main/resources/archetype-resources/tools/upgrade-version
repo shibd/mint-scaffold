@@ -13,6 +13,7 @@ fi
 
 # 回到工程目录
 cd `dirname $0`/../common
+pwd
 
 version=$1
 mvn -DnewVersion=${version} -DgenerateBackupPoms=false  versions:set

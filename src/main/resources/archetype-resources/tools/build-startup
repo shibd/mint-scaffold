@@ -7,12 +7,14 @@ set -e
 APP_PATH=$(cd `dirname $0`/../; pwd)
 APP_NAME=`echo $APP_PATH | awk -F "/" '{print $NF}'`
 cd $APP_PATH
+echo APP_NAME:$APP_NAME
+echo APP_PATH:$APP_PATH
 
 # 0. 删除旧应用
 # mac os
-#jps | grep ${projectName} | awk '{print $1}' | xargs -I {} kill -9 {}
+#jps | grep $APP_NAME | awk '{print $1}' | xargs -I {} kill -9 {}
 # linux
-#jps | grep ${projectName} | awk '{print $1}' | xargs -r kill
+#jps | grep $APP_NAME | awk '{print $1}' | xargs -r kill
 
 # 1. 测试-打包
 mvn clean package
@@ -22,8 +24,7 @@ echo "test and build success, start new process now"
 #nohup \
 java \
 -jar \
--DDFOCUS_LOG_ROOT=./logs \
--Dlogging.config="classpath:xml/logback-dev.xml" \
+-DLOG_PATH_ROOT=./logs \
 $APP_PATH/application/target/$APP_NAME.application.jar \
 #-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=n,address=8000 \
 #2>&1 1>/dev/null &

@@ -44,7 +44,15 @@
                 <fileSet filtered="true" encoding="UTF-8" packaged="false">
                     <directory>src/main/resources</directory>
                     <includes>
-                        <include>**/*.*</include>
+                        <include>config/*.*</include>
+                        <include>db/*.*</include>
+                    </includes>
+                </fileSet>
+                <fileSet filtered="false" encoding="UTF-8" packaged="false">
+                    <directory>src/main/resources</directory>
+                    <includes>
+                        <include>xml/logback.xml</include>
+                        <include>xml/logback-prod.xml</include>
                     </includes>
                 </fileSet>
                 <fileSet filtered="true" encoding="UTF-8" packaged="false">
