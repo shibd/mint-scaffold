@@ -15,9 +15,9 @@ def buildStartup = new File( request.getOutputDirectory(), request.getArtifactId
 println "build-startup file path:" + buildStartup;
 buildStartup.setExecutable(true, false)
 
-print "              _           _   \n" +
+print "              _           _   \n\n" +
         "  _ __ ___   (_)  _ __   | |_ \n" +
         " | '_ ` _ \\  | | | '_ \\  | __|\n" +
         " | | | | | | | | | | | | | |_ \n" +
         " |_| |_| |_| |_| |_| |_|  \\__|\n" +
-        " Dfocus Scaffold:(v3.1.SNAPSHOT) \n"
+        " Dfocus Scaffold:(v3.1.SNAPSHOT) \n\n"
