@@ -6,10 +6,8 @@ server:
   port: 8080
   servlet.context-path: /${projectName}
 
-## 简单log日志级别配置,如果有详细配置,请到xml/logback-spring.xml中配置
-logging:
-  level:
-    root: info
+## log文件位置,建议log相关配置到文件中统一配置
+logging.config: classpath:xml/logback.xml
 
 ## 集成中间件服务配置(根据工程需要选择性开关)
 spring.profiles.include: db,kafka,job,cloud
