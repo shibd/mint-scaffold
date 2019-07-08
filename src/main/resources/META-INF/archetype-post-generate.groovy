@@ -15,7 +15,8 @@ def buildStartup = new File( request.getOutputDirectory(), request.getArtifactId
 println "build-startup file path:" + buildStartup;
 buildStartup.setExecutable(true, false)
 
-print "              _           _   \n\n" +
+print   "\n" +
+        "              _           _   \n" +
         "  _ __ ___   (_)  _ __   | |_ \n" +
         " | '_ ` _ \\  | | | '_ \\  | __|\n" +
         " | | | | | | | | | | | | | |_ \n" +
