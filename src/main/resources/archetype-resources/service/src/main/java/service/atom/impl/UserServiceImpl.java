@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
     public boolean createUser(UserDto userDto) {
         User user = UserDtoTransfer.dtoTransPo(userDto);
         int id = userDao.insert(user);
-        return id > 1 ? true : false;
+        return id > 0;
     }
 
     @Override
