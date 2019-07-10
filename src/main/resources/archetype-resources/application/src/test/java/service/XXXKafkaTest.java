@@ -32,4 +32,16 @@ public class XXXKafkaTest extends ${classPrefix}ApplicationTests {
         receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
         assertThat(receiver.getLatch().getCount()).isEqualTo(0);
     }
+
+
+    /**
+     * 建议这种测试
+     * @throws Exception
+     */
+    @Test
+    public void mockTestReceive() throws Exception {
+       receiver.receive("Hello Mock Test");
+       receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
+       assertThat(receiver.getLatch().getCount()).isEqualTo(0);
+    }
 }
