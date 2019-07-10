@@ -18,3 +18,8 @@ spring.kafka:
 xxx:
   group: ${projectName}
   topic: ${projectName}
+
+# eureka
+eureka:
+  client:
+    enabled: false

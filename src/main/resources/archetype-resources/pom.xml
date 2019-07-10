@@ -33,6 +33,7 @@
         <spring.cloud.openfeign.version>2.1.2.RELEASE</spring.cloud.openfeign.version>
         <spring-cloud-sleuth.version>2.1.2.RELEASE</spring-cloud-sleuth.version>
         <spring-data-common.version>2.1.9.RELEASE</spring-data-common.version>
+        <spring-cloud-netflixn.version>2.1.2.RELEASE</spring-cloud-netflixn.version>
         <!-- other -->
         <fastjson.version>1.2.4</fastjson.version>
         <mybatis.starter.version>1.3.1</mybatis.starter.version>
@@ -98,6 +99,16 @@
                 <scope>import</scope>
             </dependency>
             <!-- 为了统一,统一声明-->
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+                <version>${spring-cloud-netflixn.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+                <version>${spring-cloud-netflixn.version}</version>
+            </dependency>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-starter-openfeign</artifactId>

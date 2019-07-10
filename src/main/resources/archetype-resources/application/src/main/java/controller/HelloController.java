@@ -31,7 +31,7 @@ public class HelloController {
 //        UserFaReq userFaReq = new UserFaReq();
 //        userFaReq.setAccount("baozi");
 //        userFaReq.setNickName("baozinick");
-//        Response<List<UserFaReq>> response = userFeign.createUser(userFaReq);
+//        Response<List<UserFaReq>> response = userFeign.testUser(userFaReq);
 //        if (response.success()) {
 //            List<UserFaReq> data = response.getData();
 //            for (UserFaReq datum : data) {

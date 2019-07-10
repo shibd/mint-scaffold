@@ -16,16 +16,14 @@ spring.datasource:
 mybatis:
   mapper-locations: classpath:mapper/**/*.xml
 
-# flyway
-spring:
-  h2:
-    console:
-      path: /h2-console
-      enabled: true
-      settings:
-        web-allow-others: true
-  flyway:
+# 内存数据库页面配置
+spring.h2:
+  console:
+    path: /h2-console
     enabled: true
-    locations: classpath:/db
-
-
+    settings:
+      web-allow-others: true
+# flyway配置
+spring.flyway:
+  enabled: true
+  locations: classpath:/db

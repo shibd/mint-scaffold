@@ -42,8 +42,8 @@ public class UserFacadeImpl implements UserFacade {
         userFaReqs.add(userFaReq2);
 
         // 有问题可以直接抛出异常
-        throw new BizException(ResultCode.SYS_ERROR);
+//        throw new BizException(ResultCode.SYS_ERROR);
         // 可以直接返回
-        // return Response.success(userFaReqs);
+         return Response.success(userFaReqs);
     }
 }
