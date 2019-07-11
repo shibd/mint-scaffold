@@ -24,7 +24,7 @@ mvn -e archetype:generate \
 - 引入XXJob
 - ...
 
-## [3.1]()
+## [3.1](https://gitlab.dfocus.co/frameworks/mint-scaffold/tags/3.1)
 - 微服务打通注册中心(ribbon,eureka)
 - 完善单元测试写法
 - 规范logback
