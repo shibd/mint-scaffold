@@ -21,20 +21,20 @@ import java.util.List;
 public class HelloController {
 
 //    @Autowired
-//    private UserFeign userFeign;
+//    private MintFeign mintFeign;
 
     @ApiOperation("接口: 测试接口")
     @RequestMapping(method = RequestMethod.GET)
     public String hello() {
 
 //        模拟调用远程服务,建议再service层调用
-//        UserFaReq userFaReq = new UserFaReq();
-//        userFaReq.setAccount("baozi");
-//        userFaReq.setNickName("baozinick");
-//        Response<List<UserFaReq>> response = userFeign.testUser(userFaReq);
+//        MintFaReq mintFaReq = new MintFaReq();
+//        mintFaReq.setAccount("baozi");
+//        mintFaReq.setNickName("baozinick");
+//        Response<List<MintFaReq>> response = mintFeign.testMint(mintFaReq);
 //        if (response.success()) {
-//            List<UserFaReq> data = response.getData();
-//            for (UserFaReq datum : data) {
+//            List<MintFaReq> data = response.getData();
+//            for (MintFaReq datum : data) {
 //                System.out.println(datum.getAccount());
 //            }
 //        } else {

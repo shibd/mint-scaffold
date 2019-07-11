@@ -1,6 +1,6 @@
 package ${package}.service.compose;
-import ${package}.service.dto.user.SearchUser;
-import ${package}.service.dto.user.UserDto;
+import ${package}.service.dto.mint.SearchMint;
+import ${package}.service.dto.mint.MintDto;
 
 import java.util.List;
 
@@ -12,14 +12,14 @@ import java.util.List;
 public interface XXXComposeService {
     /**
      * 模拟调用用户原子查询服务
-     * @param searchUser
+     * @param searchMint
      * @return
      */
-    List<UserDto> testComposeSearchUser(SearchUser searchUser);
+    List<MintDto> testComposeSearchMint(SearchMint searchMint);
     /**
      * 模拟调用用户原子服务和发送事件
-     * @param searchUser
+     * @param searchMint
      * @return
      */
-    List<UserDto> testComposeSearchUserAndSendEvent(SearchUser searchUser);
+    List<MintDto> testComposeSearchMintAndSendEvent(SearchMint searchMint);
 }

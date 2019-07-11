@@ -1,5 +1,5 @@
 -- auto-generated definition
-create table user
+create table mint
 (
   id       int auto_increment
     primary key,

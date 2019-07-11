@@ -1,4 +1,4 @@
-package ${package}.service.dto.user;
+package ${package}.service.dto.mint;
 
 import lombok.Data;
 
@@ -8,7 +8,7 @@ import lombok.Data;
  * @Description:
  */
 @Data
-public class SearchUser {
+public class SearchMint {
     /**
      * 账号
      */

@@ -1,10 +1,10 @@
 package ${package}.service;
 
 import ${package}.${classPrefix}ApplicationTests;
-import ${package}.service.atom.UserService;
+import ${package}.service.atom.MintService;
 import ${package}.service.compose.XXXComposeService;
-import ${package}.service.dto.user.SearchUser;
-import ${package}.service.dto.user.UserDto;
+import ${package}.service.dto.mint.SearchMint;
+import ${package}.service.dto.mint.MintDto;
 import com.alibaba.fastjson.JSONObject;
 import org.junit.Assert;
 import org.junit.Before;
@@ -34,30 +34,30 @@ public class XXXComposeServiceMockTest2 extends ${classPrefix}ApplicationTests {
     XXXComposeService xxxComposeService;
 
     @MockBean
-    UserService userService;
+    MintService mintService;
 
     // mock搜索条件
-    SearchUser searchUser = new SearchUser();
+    SearchMint searchMint = new SearchMint();
 
     @Before
     public void befor() {
         // mock
-        searchUser.setAccount("test1");
-        searchUser.setNickName("test2");
+        searchMint.setAccount("test1");
+        searchMint.setNickName("test2");
 
-        UserDto userDto = new UserDto();
-        userDto.setAccount("mock2-account");
-        userDto.setNickName("mock2-nickName");
+        MintDto mintDto = new MintDto();
+        mintDto.setAccount("mock2-account");
+        mintDto.setNickName("mock2-nickName");
 
-        Mockito.when(userService.getUsers(searchUser)).thenReturn(Arrays.asList(userDto));
+        Mockito.when(mintService.getMints(searchMint)).thenReturn(Arrays.asList(mintDto));
     }
 
     @Test
     public void testXXXMockTest() {
-        List<UserDto> users = xxxComposeService.testComposeSearchUserAndSendEvent(searchUser);
-        System.out.println(JSONObject.toJSONString(users));
-        Assert.assertTrue(users.size() == 1);
-        Assert.assertTrue(users.get(0).getAccount().equals("mock2-account"));
+        List<MintDto> mints = xxxComposeService.testComposeSearchMintAndSendEvent(searchMint);
+        System.out.println(JSONObject.toJSONString(mints));
+        Assert.assertTrue(mints.size() == 1);
+        Assert.assertTrue(mints.get(0).getAccount().equals("mock2-account"));
     }
 
 

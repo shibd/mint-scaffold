@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="${package}.common.dao.UserMapper">
-  <resultMap id="BaseResultMap" type="${package}.common.model.po.auto.User">
+<mapper namespace="${package}.common.dao.MintMapper">
+  <resultMap id="BaseResultMap" type="${package}.common.model.po.auto.Mint">
     <id column="id" jdbcType="INTEGER" property="id" />
     <result column="account" jdbcType="VARCHAR" property="account" />
     <result column="password" jdbcType="VARCHAR" property="password" />
@@ -68,13 +68,13 @@
   <sql id="Base_Column_List">
     id, account, password, nick_name
   </sql>
-  <select id="selectByExample" parameterType="${package}.common.model.po.auto.UserExample" resultMap="BaseResultMap">
+  <select id="selectByExample" parameterType="${package}.common.model.po.auto.MintExample" resultMap="BaseResultMap">
     select
     <if test="distinct">
       distinct
     </if>
     <include refid="Base_Column_List" />
-    from user
+    from mint
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
@@ -85,27 +85,27 @@
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
-    from user
+    from mint
     where id = #{id,jdbcType=INTEGER}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from user
+    delete from mint
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <delete id="deleteByExample" parameterType="${package}.common.model.po.auto.UserExample">
-    delete from user
+  <delete id="deleteByExample" parameterType="${package}.common.model.po.auto.MintExample">
+    delete from mint
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </delete>
-  <insert id="insert" parameterType="${package}.common.model.po.auto.User">
-    insert into user (id, account, password, 
+  <insert id="insert" parameterType="${package}.common.model.po.auto.Mint">
+    insert into mint (id, account, password, 
       nick_name)
     values (#{id,jdbcType=INTEGER}, #{account,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR}, 
       #{nickName,jdbcType=VARCHAR})
   </insert>
-  <insert id="insertSelective" parameterType="${package}.common.model.po.auto.User">
-    insert into user
+  <insert id="insertSelective" parameterType="${package}.common.model.po.auto.Mint">
+    insert into mint
     <trim prefix="(" suffix=")" suffixOverrides=",">
       <if test="id != null">
         id,
@@ -135,14 +135,14 @@
       </if>
     </trim>
   </insert>
-  <select id="countByExample" parameterType="${package}.common.model.po.auto.UserExample" resultType="java.lang.Long">
-    select count(*) from user
+  <select id="countByExample" parameterType="${package}.common.model.po.auto.MintExample" resultType="java.lang.Long">
+    select count(*) from mint
     <if test="_parameter != null">
       <include refid="Example_Where_Clause" />
     </if>
   </select>
   <update id="updateByExampleSelective" parameterType="map">
-    update user
+    update mint
     <set>
       <if test="record.id != null">
         id = #{record.id,jdbcType=INTEGER},
@@ -162,7 +162,7 @@
     </if>
   </update>
   <update id="updateByExample" parameterType="map">
-    update user
+    update mint
     set id = #{record.id,jdbcType=INTEGER},
       account = #{record.account,jdbcType=VARCHAR},
       password = #{record.password,jdbcType=VARCHAR},
@@ -171,8 +171,8 @@
       <include refid="Update_By_Example_Where_Clause" />
     </if>
   </update>
-  <update id="updateByPrimaryKeySelective" parameterType="${package}.common.model.po.auto.User">
-    update user
+  <update id="updateByPrimaryKeySelective" parameterType="${package}.common.model.po.auto.Mint">
+    update mint
     <set>
       <if test="account != null">
         account = #{account,jdbcType=VARCHAR},
@@ -186,8 +186,8 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="${package}.common.model.po.auto.User">
-    update user
+  <update id="updateByPrimaryKey" parameterType="${package}.common.model.po.auto.Mint">
+    update mint
     set account = #{account,jdbcType=VARCHAR},
       password = #{password,jdbcType=VARCHAR},
       nick_name = #{nickName,jdbcType=VARCHAR}

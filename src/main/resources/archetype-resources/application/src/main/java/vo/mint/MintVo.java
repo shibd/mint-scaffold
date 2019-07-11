@@ -1,4 +1,4 @@
-package ${package}.vo.user;
+package ${package}.vo.mint;
 
 import lombok.Data;
 
@@ -8,7 +8,7 @@ import lombok.Data;
  * @Description:
  */
 @Data
-public class UserVo {
+public class MintVo {
     /**
      * 账号
      */

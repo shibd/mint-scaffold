@@ -1,6 +1,8 @@
-package ${package}.facade.model;
+package ${package}.service.dto.mint;
 
 import lombok.Data;
+
+import javax.validation.constraints.NotEmpty;
 
 /**
  * @Auther: baozi
@@ -8,15 +10,17 @@ import lombok.Data;
  * @Description:
  */
 @Data
-public class UserFaReq {
+public class MintDto {
     /**
      * 账号
      */
+    @NotEmpty(message = "公司名称不能为空")
     private String account;
 
     /**
      * 密码
      */
+    @NotEmpty(message = "密码不能为空")
     private String password;
 
     /**

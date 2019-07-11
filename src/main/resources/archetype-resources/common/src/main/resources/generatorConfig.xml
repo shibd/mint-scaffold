@@ -16,7 +16,7 @@
 
         <!-- Where to pull the data from -->
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
-                        connectionURL="" userId=""
+                        connectionURL="" mintId=""
                         password=""/>
 
         <!-- Note that the targetProject refers to the name of the project in your
@@ -36,7 +36,7 @@
                              type="XMLMAPPER"/>
 
         <!-- table -->
-        <table tableName="user">
+        <table tableName="mint">
         </table>
 
     </context>

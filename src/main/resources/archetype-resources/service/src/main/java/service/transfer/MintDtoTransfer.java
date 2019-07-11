@@ -1,0 +1,28 @@
+package ${package}.service.transfer;
+
+import ${package}.common.model.po.auto.Mint;
+import ${package}.service.dto.mint.MintDto;
+
+/**
+ * @Auther: baozi
+ * @Date: 2019/6/25 15:33
+ * @Description:
+ */
+public abstract class MintDtoTransfer {
+
+    public static Mint dtoTransPo(MintDto mintDto) {
+        Mint mint = new Mint();
+        mint.setAccount(mintDto.getAccount());
+        mint.setPassword(mintDto.getPassword());
+        mint.setNickName(mintDto.getNickName());
+        return mint;
+    }
+
+    public static MintDto poTransDto(Mint mintPo) {
+        MintDto mintDto = new MintDto();
+        mintDto.setAccount(mintPo.getAccount());
+        mintDto.setPassword(mintPo.getPassword());
+        mintDto.setNickName(mintPo.getNickName());
+        return mintDto;
+    }
+}

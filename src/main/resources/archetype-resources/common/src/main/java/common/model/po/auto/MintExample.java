@@ -3,14 +3,14 @@ package ${package}.common.model.po.auto;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UserExample {
+public class MintExample {
     protected String orderByClause;
 
     protected boolean distinct;
 
     protected List<Criteria> oredCriteria;
 
-    public UserExample() {
+    public MintExample() {
         oredCriteria = new ArrayList<Criteria>();
     }
 

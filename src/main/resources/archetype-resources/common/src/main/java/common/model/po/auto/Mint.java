@@ -1,6 +1,6 @@
 package ${package}.common.model.po.auto;
 
-public class User {
+public class Mint {
     private Integer id;
 
     private String account;

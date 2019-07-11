@@ -1,9 +1,9 @@
 package ${package}.service.compose.impl;
 
-import ${package}.service.atom.UserService;
+import ${package}.service.atom.MintService;
 import ${package}.service.compose.XXXComposeService;
-import ${package}.service.dto.user.SearchUser;
-import ${package}.service.dto.user.UserDto;
+import ${package}.service.dto.mint.SearchMint;
+import ${package}.service.dto.mint.MintDto;
 import ${package}.service.kafka.XXXSender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -20,19 +20,19 @@ public class XXXComposeServiceImpl implements XXXComposeService {
 
 
     @Autowired
-    UserService userService;
+    MintService mintService;
 
     @Autowired
     XXXSender xxxSender;
 
     @Override
-    public List<UserDto> testComposeSearchUser(SearchUser searchUser) {
-        return userService.getUsers(searchUser);
+    public List<MintDto> testComposeSearchMint(SearchMint searchMint) {
+        return mintService.getMints(searchMint);
     }
 
     @Override
-    public List<UserDto> testComposeSearchUserAndSendEvent(SearchUser searchUser) {
-        xxxSender.send(searchUser.getAccount());
-        return userService.getUsers(searchUser);
+    public List<MintDto> testComposeSearchMintAndSendEvent(SearchMint searchMint) {
+        xxxSender.send(searchMint.getAccount());
+        return mintService.getMints(searchMint);
     }
 }
