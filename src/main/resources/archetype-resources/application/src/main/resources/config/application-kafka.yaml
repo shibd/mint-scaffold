@@ -9,7 +9,8 @@ spring.kafka:
   consumer:
     group-id: ${projectName}
     enable-auto-commit: true
-    auto-commit-interval: 100
+    # 自动提交offset的时间间隔
+    auto-commit-interval: PT0.5S
     key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
     value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
     auto-offset-reset: earliest
