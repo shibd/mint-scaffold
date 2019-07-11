@@ -10,8 +10,8 @@ Spring Boot快速开发脚手架
 mvn -e archetype:generate \
  -DarchetypeGroupId=com.dfocus.archetypes \
  -DarchetypeArtifactId=mint-scaffold \
- -DarchetypeVersion=2.0-SNAPSHOT \
- -Dversion=2.0 \
+ -DarchetypeVersion=3.2-SNAPSHOT \
+ -Dversion=1.0-SNAPSHOT \
  -DgroupId=com.dfocus.hello \
  -DartifactId=hello \
  -DinteractiveMode=false
