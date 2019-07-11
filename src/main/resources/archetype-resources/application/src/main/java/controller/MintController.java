@@ -24,7 +24,7 @@ import java.util.List;
  * @Date: 2019/6/11 10:05
  * @Description:
  */
-@Api("接口: 薄荷")
+@Api("接口: 薄荷Demo")
 @RestController
 public class MintController {
 
@@ -38,7 +38,7 @@ public class MintController {
         return Response.success(mintService.createMint(mintDto));
     }
 
-    @ApiOperation("接口: 搜索薄荷"z)
+    @ApiOperation("接口: 搜索薄荷")
     @RequestMapping(method = RequestMethod.POST, value = "/mints/search")
     Response<List<MintVo>> getMints(@RequestBody SearchMint searchMint) {
         List<MintVo> mintVos = new ArrayList<>();
