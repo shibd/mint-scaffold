@@ -4,7 +4,7 @@ Spring Boot快速开发脚手架
 相关文档请移步：https://dfocus.yuque.com/research-development/dr0yl5/sskkhu/edit
 
 # 快速入门
-1. 配置Maven仓库为公司私服，参见文章：https://dfocus.yuque.com/research-development/dr0yl5/gqphaf
+1. 配置Maven仓库为公司私服，参见文章：https://dfocus.yuque.com/research-development/dr0yl5/sskkhu
 2. 使用下述命令快速生成一个开发脚手架，-DgroupId和-DartifactId自己根据项目自定义。
 ```
 mvn -e archetype:generate \
