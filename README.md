@@ -19,11 +19,18 @@ mvn -e archetype:generate \
 
 # 版本Release
 
-## 3.1-SNAPSHOT版本 - doing
+## 3.2-SNAPSHOT版本 - doing
 - 引入mybatis-plus
-- 微服务打通注册中心
 - 引入XXJob
 - ...
+
+## [3.1]()
+- 微服务打通注册中心(ribbon,eureka)
+- 完善单元测试写法
+- 规范logback
+- 引入内存kafka,完善对kafka使用测试
+- 修改demo表名
+
 
 ## [3.0](https://gitlab.dfocus.co/frameworks/mint-scaffold/tags/3.0)
 - 集成统一脚本
