@@ -11,8 +11,7 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @Date: 2019/6/14 16:00
  * @Description:
  */
-@EmbeddedKafka(partitions = 1, topics = "${xxx.topic}")
-@TestPropertySource(properties = {"app.scheduling.enable=false", "kafka.enable=true"})
+@TestPropertySource(properties = {"app.scheduling.enable=false"})
 @RunWith(SpringRunner.class)
 @SpringBootTest
 public class ${classPrefix}ApplicationTests {
