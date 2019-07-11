@@ -10,7 +10,7 @@ Spring Boot快速开发脚手架
 mvn -e archetype:generate \
  -DarchetypeGroupId=com.dfocus.archetypes \
  -DarchetypeArtifactId=mint-scaffold \
- -DarchetypeVersion=3.1 \
+ -DarchetypeVersion=3.1-RELEASE \
  -Dversion=1.0-SNAPSHOT \
  -DgroupId=com.dfocus.hello \
  -DartifactId=hello \
@@ -24,7 +24,7 @@ mvn -e archetype:generate \
 - 引入XXJob
 - ...
 
-## [3.1](https://gitlab.dfocus.co/frameworks/mint-scaffold/tags/3.1)
+## [3.1-RELEASE](https://gitlab.dfocus.co/frameworks/mint-scaffold/tags/3.1)
 - 微服务打通注册中心(ribbon,eureka)
 - 完善单元测试写法
 - 规范logback
