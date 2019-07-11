@@ -21,4 +21,4 @@ print   "\n" +
         " | '_ ` _ \\  | | | '_ \\  | __|\n" +
         " | | | | | | | | | | | | | |_ \n" +
         " |_| |_| |_| |_| |_| |_|  \\__|\n" +
-        "  Mint Scaffold:(v3.1-RELEASE) \n\n"
+        "  Mint Scaffold:(v3.2-SNAPSHOT) \n\n"
