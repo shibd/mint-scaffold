@@ -8,6 +8,7 @@ import ${package}.service.dto.mint.SearchMint;
 import ${package}.service.dto.mint.MintDto;
 import ${package}.service.transfer.MintDtoTransfer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -45,8 +46,19 @@ public class MintServiceImpl implements MintService {
         return mintDtos;
     }
 
+    /**
+     * todo 简单mock数据
+     * 目前还没有引入分页插件
+     * 待替换mybatis和选型分页插件
+     * 计划：
+     * 1. mybatis-plus + spring common
+     * 2. mybatis + PageHelper
+     */
     @Override
     public Page<MintDto> listMints(Pageable pageable) {
-        return null;
+        List<MintDto> mintDtos = new ArrayList<>();
+        List<Mint> mints = mintDao.selectByExample(null);
+        mints.forEach(mint -> mintDtos.add(MintDtoTransfer.poTransDto(mint)));
+        return new PageImpl<>(mintDtos);
     }
 }
