@@ -1,7 +1,7 @@
 package ${package}.service;
 
 import ${package}.${classPrefix}ApplicationTests;
-import ${package}.service.atom.MintService;
+import ${package}.service.atom.IMintService;
 import ${package}.service.compose.XXXComposeService;
 import ${package}.service.dto.mint.SearchMint;
 import ${package}.service.dto.mint.MintDto;
@@ -34,7 +34,7 @@ public class XXXComposeServiceMockTest2 extends ${classPrefix}ApplicationTests {
     XXXComposeService xxxComposeService;
 
     @MockBean
-    MintService mintService;
+    IMintService mintService;
 
     // mock搜索条件
     SearchMint searchMint = new SearchMint();

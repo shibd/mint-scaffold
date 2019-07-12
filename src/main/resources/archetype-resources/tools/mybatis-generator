@@ -8,6 +8,7 @@ set -e
 cd `dirname $0`/../common
 pwd
 
-mvn mybatis-generator:generate
+echo 暂时不支持该功能
+#mvn mybatis-generator:generate
 ## 覆盖原来mapper,po,example. 但不会覆盖xml文件,xml会追加
 #mvn -Dmybatis.generator.overwrite=true mybatis-generator:generate

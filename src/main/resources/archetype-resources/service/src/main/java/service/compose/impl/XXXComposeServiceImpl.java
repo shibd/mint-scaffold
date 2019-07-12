@@ -1,6 +1,6 @@
 package ${package}.service.compose.impl;
 
-import ${package}.service.atom.MintService;
+import ${package}.service.atom.IMintService;
 import ${package}.service.compose.XXXComposeService;
 import ${package}.service.dto.mint.SearchMint;
 import ${package}.service.dto.mint.MintDto;
@@ -20,7 +20,7 @@ public class XXXComposeServiceImpl implements XXXComposeService {
 
 
     @Autowired
-    MintService mintService;
+    IMintService mintService;
 
     @Autowired
     XXXSender xxxSender;

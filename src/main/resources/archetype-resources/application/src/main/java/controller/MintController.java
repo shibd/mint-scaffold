@@ -1,6 +1,6 @@
 package ${package}.controller;
 
-import ${package}.service.atom.MintService;
+import ${package}.service.atom.IMintService;
 import ${package}.service.dto.mint.SearchMint;
 import ${package}.service.dto.mint.MintDto;
 import ${package}.transfer.MintVoTransfer;
@@ -29,7 +29,7 @@ import java.util.List;
 public class MintController {
 
     @Autowired
-    MintService mintService;
+    IMintService mintService;
 
     @ApiOperation("接口: 创建薄荷")
     @RequestMapping(method = RequestMethod.POST, value = "/mint")

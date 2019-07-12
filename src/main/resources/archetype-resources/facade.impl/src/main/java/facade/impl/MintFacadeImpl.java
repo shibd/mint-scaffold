@@ -3,7 +3,7 @@ package ${package}.facade.impl;
 import ${package}.facade.api.MintFacade;
 import ${package}.facade.model.MintFaReq;
 import ${package}.facade.transfer.MintFaTransfer;
-import ${package}.service.atom.MintService;
+import ${package}.service.atom.IMintService;
 import ${package}.service.dto.mint.MintDto;
 import ${package}.service.common.exception.BizException;
 import ${package}.service.common.constant.ResultCode;
@@ -24,7 +24,7 @@ import java.util.List;
 public class MintFacadeImpl implements MintFacade {
 
     @Autowired
-    MintService mintService;
+    IMintService mintService;
 
     @Override
     public Response<List<MintFaReq>> testMint(@RequestBody MintFaReq mintFaReq) {

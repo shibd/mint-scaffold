@@ -1,6 +1,6 @@
 package ${package}.service.transfer;
 
-import ${package}.common.model.po.auto.Mint;
+import ${package}.common.entity.Mint;
 import ${package}.service.dto.mint.MintDto;
 
 /**

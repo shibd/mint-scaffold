@@ -3,8 +3,10 @@ package ${package}.service.atom;
 
 import ${package}.service.dto.mint.SearchMint;
 import ${package}.service.dto.mint.MintDto;
+import ${package}.common.entity.Mint;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
 
@@ -13,7 +15,7 @@ import java.util.List;
  * @Date: 2019/6/25 14:57
  * @Description:
  */
-public interface MintService {
+public interface IMintService extends IService<Mint> {
     /**
      * 创建mint
      * @param mintDto

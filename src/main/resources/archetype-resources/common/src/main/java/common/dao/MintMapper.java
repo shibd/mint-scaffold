@@ -1,30 +1,16 @@
 package ${package}.common.dao;
 
-import ${package}.common.model.po.auto.Mint;
-import ${package}.common.model.po.auto.MintExample;
-import java.util.List;
-import org.apache.ibatis.annotations.Param;
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import ${package}.common.entity.Mint;
 
-public interface MintMapper {
-    long countByExample(MintExample example);
+/**
+ * <p>
+ *  Mapper 接口
+ * </p>
+ *
+ * @author baozi
+ * @since 2019-07-12
+ */
+public interface MintMapper extends BaseMapper<Mint> {
 
-    int deleteByExample(MintExample example);
-
-    int deleteByPrimaryKey(Integer id);
-
-    int insert(Mint record);
-
-    int insertSelective(Mint record);
-
-    List<Mint> selectByExample(MintExample example);
-
-    Mint selectByPrimaryKey(Integer id);
-
-    int updateByExampleSelective(@Param("record") Mint record, @Param("example") MintExample example);
-
-    int updateByExample(@Param("record") Mint record, @Param("example") MintExample example);
-
-    int updateByPrimaryKeySelective(Mint record);
-
-    int updateByPrimaryKey(Mint record);
 }

@@ -1,17 +1,20 @@
 package ${package}.service.atom.impl;
 
+import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
+import com.baomidou.mybatisplus.core.toolkit.Wrappers;
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import ${package}.common.dao.MintMapper;
-import ${package}.common.model.po.auto.Mint;
-import ${package}.common.model.po.auto.MintExample;
-import ${package}.service.atom.MintService;
-import ${package}.service.dto.mint.SearchMint;
+import ${package}.common.entity.Mint;
+import ${package}.service.atom.IMintService;
 import ${package}.service.dto.mint.MintDto;
+import ${package}.service.dto.mint.SearchMint;
 import ${package}.service.transfer.MintDtoTransfer;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.data.domain.PageImpl;
-import org.springframework.stereotype.Service;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageImpl;
 import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -21,7 +24,7 @@ import java.util.List;
  * @Description:
  */
 @Service
-public class MintServiceImpl implements MintService {
+public class MintServiceImpl extends ServiceImpl<MintMapper, Mint> implements IMintService {
 
     @Autowired
     MintMapper mintDao;
@@ -35,13 +38,13 @@ public class MintServiceImpl implements MintService {
 
     @Override
     public List<MintDto> getMints(SearchMint searchMint) {
-        MintExample mintExample = new MintExample();
-        mintExample.createCriteria()
-                .andAccountEqualTo(searchMint.getAccount())
-                .andNickNameEqualTo(searchMint.getNickName());
-
         List<MintDto> mintDtos = new ArrayList<>();
-        List<Mint> mints = mintDao.selectByExample(mintExample);
+
+        LambdaQueryWrapper<Mint> wrapper = Wrappers.lambdaQuery();
+        wrapper.eq(Mint::getAccount, searchMint.getAccount());
+        wrapper.eq(Mint::getNickName, searchMint.getNickName());
+
+        List<Mint> mints = mintDao.selectList(wrapper);
         mints.forEach(mint -> mintDtos.add(MintDtoTransfer.poTransDto(mint)));
         return mintDtos;
     }
@@ -57,7 +60,7 @@ public class MintServiceImpl implements MintService {
     @Override
     public Page<MintDto> listMints(Pageable pageable) {
         List<MintDto> mintDtos = new ArrayList<>();
-        List<Mint> mints = mintDao.selectByExample(null);
+        List<Mint> mints = mintDao.selectList(Wrappers.emptyWrapper());
         mints.forEach(mint -> mintDtos.add(MintDtoTransfer.poTransDto(mint)));
         return new PageImpl<>(mintDtos);
     }

@@ -1,7 +1,7 @@
 package ${package}.service;
 
 import ${package}.${classPrefix}ApplicationTests;
-import ${package}.service.atom.MintService;
+import ${package}.service.atom.IMintService;
 import ${package}.service.dto.mint.SearchMint;
 import ${package}.service.dto.mint.MintDto;
 import org.junit.Assert;
@@ -18,7 +18,7 @@ import java.util.List;
 public class MintServiceTest extends ${classPrefix}ApplicationTests {
 
     @Autowired
-    MintService mintService;
+    IMintService mintService;
 
     @Test
     public void testSearch() {
