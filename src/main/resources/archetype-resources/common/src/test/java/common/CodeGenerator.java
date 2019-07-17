@@ -40,7 +40,7 @@ public class CodeGenerator {
     private static String password = "";
 
     public static void main(String[] args) {
-        if (!StringUtils.isEmpty(args[0])) {
+        if (args.length > 0 && !StringUtils.isEmpty(args[0])) {
             baseProjectPath = args[0];
             System.out.println("外部传入生成路径:" + baseProjectPath);
         }

@@ -9,4 +9,5 @@ APP_PATH=$(cd `dirname $0`/../; pwd)
 cd $APP_PATH/common
 echo projectPath:$APP_PATH
 
-mvn test -Pcode-generator -Dgen.path=$APP_PATH/common
+mvn exec:java -Dgen.path=$APP_PATH/common
+
