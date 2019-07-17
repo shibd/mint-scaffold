@@ -5,7 +5,6 @@ import ${package}.service.atom.IMintService;
 import ${package}.service.compose.XXXComposeService;
 import ${package}.service.dto.mint.SearchMint;
 import ${package}.service.dto.mint.MintDto;
-import com.alibaba.fastjson.JSONObject;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -55,7 +54,7 @@ public class XXXComposeServiceMockTest2 extends ${classPrefix}ApplicationTests {
     @Test
     public void testXXXMockTest() {
         List<MintDto> mints = xxxComposeService.testComposeSearchMintAndSendEvent(searchMint);
-        System.out.println(JSONObject.toJSONString(mints));
+        System.out.println(mints);
         Assert.assertTrue(mints.size() == 1);
         Assert.assertTrue(mints.get(0).getAccount().equals("mock2-account"));
     }

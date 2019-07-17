@@ -1,6 +1,7 @@
 package ${package}.service.dto.mint;
 
 import lombok.Data;
+import lombok.ToString;
 
 import javax.validation.constraints.NotEmpty;
 
@@ -10,6 +11,7 @@ import javax.validation.constraints.NotEmpty;
  * @Description:
  */
 @Data
+@ToString
 public class MintDto {
     /**
      * 账号

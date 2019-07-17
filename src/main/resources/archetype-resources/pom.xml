@@ -35,7 +35,6 @@
         <spring-data-common.version>2.1.9.RELEASE</spring-data-common.version>
         <spring-cloud-netflixn.version>2.1.2.RELEASE</spring-cloud-netflixn.version>
         <!-- other -->
-        <fastjson.version>1.2.4</fastjson.version>
         <mybatis-plus.version>3.1.2</mybatis-plus.version>
         <freemarker.version>2.3.28</freemarker.version>
         <swagger.version>2.6.1</swagger.version>
@@ -129,13 +128,6 @@
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-commons</artifactId>
                 <version>${spring-data-common.version}</version>
-            </dependency>
-
-            <!--工具包-->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
             </dependency>
 
             <!-- mybatis-plus-starter -->
