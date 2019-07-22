@@ -1,21 +1,40 @@
-// 设置脚本可执行权限
-def deployMaven = new File( request.getOutputDirectory(), request.getArtifactId() + "/tools/deploy-maven")
-println "deploy-maven file path:" + deployMaven
-deployMaven.setExecutable(true, false)
+projectDir = new File(new File(request.outputDirectory), request.artifactId)
 
-def upgradeVersion = new File( request.getOutputDirectory(), request.getArtifactId() + "/tools/upgrade-version")
-println "upgrade-version file path:" + upgradeVersion;
-upgradeVersion.setExecutable(true, false)
+/**
+ * 在projectDir目录下运行命令
+ * @param cmd
+ * @return
+ */
+def run(String cmd) {
+    def process = cmd.execute(null, projectDir)
+    process.waitForProcessOutput((Appendable) System.out, System.err)
+    if (process.exitValue() != 0) {
+        process.
+                throw new Exception("Command '$cmd' exited with code: ${process.exitValue()}")
+    }
+}
 
-def mybatisGenerator = new File( request.getOutputDirectory(), request.getArtifactId() + "/tools/mybatis-generator")
-println "mybatis-generator file path:" + mybatisGenerator;
-mybatisGenerator.setExecutable(true, false)
+/**
+ * 设置文件的可执行权限
+ * @param fileDir
+ * @return
+ */
+def setExecutable(String fileDir) {
+    def deployMaven = new File(projectDir, fileDir)
+    println "file set executable:" + deployMaven
+    deployMaven.setExecutable(true, false)
+}
 
-def buildStartup = new File( request.getOutputDirectory(), request.getArtifactId() + "/tools/build-startup")
-println "build-startup file path:" + buildStartup;
-buildStartup.setExecutable(true, false)
+// 设置文件可执行权限
+setExecutable("/tools/deploy-maven")
+setExecutable("/tools/upgrade-version")
+setExecutable("/tools/mybatis-generator")
+setExecutable("/tools/build-startup")
 
-print   "\n" +
+// 运行代码格式化插件
+run("mvn spring-javaformat:apply")
+
+print "\n" +
         "              _           _   \n" +
         "  _ __ ___   (_)  _ __   | |_ \n" +
         " | '_ ` _ \\  | | | '_ \\  | __|\n" +
