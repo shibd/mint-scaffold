@@ -21,8 +21,10 @@ mvn -e archetype:generate \
 
 ## 3.2-SNAPSHOT版本 - doing
 - 引入mybatis-plus
+- 增加格式化代码插件
+- 更换maven父包
+- 优化工程代码使用规范
 - 引入XXJob
-- ...
 
 ## [3.1-RELEASE](https://gitlab.dfocus.co/frameworks/mint-scaffold/tags/3.1-RELEASE)
 - 微服务打通注册中心(ribbon,eureka)

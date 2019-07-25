@@ -2,11 +2,12 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.1.6.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
+        <groupId>com.dfocus.mint</groupId>
+        <artifactId>mint-parent</artifactId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath/>
     </parent>
 
     <groupId>${groupId}</groupId>
@@ -14,31 +15,7 @@
     <version>${version}</version>
     <packaging>pom</packaging>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <url>http://repo.dfocus.top:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>releases</id>
-            <url>http://repo.dfocus.top:8081/repository/maven-releases/</url>
-        </repository>
-    </distributionManagement>
-
-
     <properties>
-        <spring.cloud.version>Greenwich.SR2</spring.cloud.version>
-        <!-- 下面版本是根据导入的dependencies中获取的,不属于自己组装,只是为了子model统一,在父model中统一再定义一下-->
-        <spring.web.version>5.1.8.RELEASE</spring.web.version>
-        <spring.cloud.openfeign.version>2.1.2.RELEASE</spring.cloud.openfeign.version>
-        <spring-cloud-sleuth.version>2.1.2.RELEASE</spring-cloud-sleuth.version>
-        <spring-data-common.version>2.1.9.RELEASE</spring-data-common.version>
-        <spring-cloud-netflixn.version>2.1.2.RELEASE</spring-cloud-netflixn.version>
-        <!-- other -->
-        <mybatis-plus.version>3.1.2</mybatis-plus.version>
-        <freemarker.version>2.3.28</freemarker.version>
-        <swagger.version>2.6.1</swagger.version>
-        <!-- model版本 -->
         <aplication.version>${version}</aplication.version>
         <service.version>${version}</service.version>
         <manager.version>${version}</manager.version>
@@ -46,8 +23,6 @@
         <integration.version>${version}</integration.version>
         <facade.api.version>${version}</facade.api.version>
         <facade.impl.version>${version}</facade.impl.version>
-        <!--dfocus sdk-->
-        <mint.web.version>1.0</mint.web.version>
     </properties>
 
     <dependencyManagement>
@@ -88,105 +63,7 @@
                 <artifactId>${artifactId}.facade.impl</artifactId>
                 <version>${facade.impl.version}</version>
             </dependency>
-
-
-            <!--import spring cloud-->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-dependencies</artifactId>
-                <version>${spring.cloud.version}</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-            <!-- 为了统一,统一声明-->
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
-                <version>${spring-cloud-netflixn.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
-                <version>${spring-cloud-netflixn.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-openfeign</artifactId>
-                <version>${spring.cloud.openfeign.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework</groupId>
-                <artifactId>spring-web</artifactId>
-                <version>${spring.web.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.cloud</groupId>
-                <artifactId>spring-cloud-starter-sleuth</artifactId>
-                <version>${spring-cloud-sleuth.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.springframework.data</groupId>
-                <artifactId>spring-data-commons</artifactId>
-                <version>${spring-data-common.version}</version>
-            </dependency>
-
-            <!-- mybatis-plus-starter -->
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>${mybatis-plus.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-generator</artifactId>
-                <version>${mybatis-plus.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>org.freemarker</groupId>
-                <artifactId>freemarker</artifactId>
-                <version>${freemarker.version}</version>
-            </dependency>
-
-            <!--接口文档-->
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger2</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>io.springfox</groupId>
-                <artifactId>springfox-swagger-ui</artifactId>
-                <version>${swagger.version}</version>
-            </dependency>
-
-            <!--dfocus-->
-            <dependency>
-                <groupId>com.dfocus.mint</groupId>
-                <artifactId>mint-web</artifactId>
-                <version>${mint.web.version}</version>
-            </dependency>
-
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <!--代码格式化插件-->
-            <plugin>
-                <groupId>io.spring.javaformat</groupId>
-                <artifactId>spring-javaformat-maven-plugin</artifactId>
-                <version>0.0.15</version>
-                <executions>
-                    <execution>
-                        <phase>validate</phase>
-                        <inherited>true</inherited>
-                        <goals>
-                            <goal>validate</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-        </plugins>
-    </build>
 
 </project>
