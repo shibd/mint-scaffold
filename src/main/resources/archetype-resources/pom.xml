@@ -16,7 +16,7 @@
     <packaging>pom</packaging>
 
     <properties>
-        <aplication.version>${version}</aplication.version>
+        <application.version>${version}</application.version>
         <service.version>${version}</service.version>
         <manager.version>${version}</manager.version>
         <common.version>${version}</common.version>
