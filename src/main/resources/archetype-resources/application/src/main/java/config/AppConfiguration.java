@@ -1,17 +1,12 @@
 package ${package}.config;
 
-import ${package}.support.WrapperResultResponseBodyAdvice;
 import org.mybatis.spring.annotation.MapperScan;
-import org.springframework.boot.autoconfigure.condition.ConditionalOnClass;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.scheduling.annotation.EnableScheduling;
-import springfox.documentation.swagger.web.ApiResourceController;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
-import springfox.documentation.swagger2.web.Swagger2Controller;
 
 /**
  * @Auther: baozi
@@ -37,20 +32,5 @@ public class AppConfiguration {
     @Configuration
     @EnableScheduling
     public static class SchedulingConfiguration {
-    }
-
-    @Configuration
-    @ConditionalOnClass({ ApiResourceController.class, Swagger2Controller.class })
-    public static class SwaggerWrapperFilterConfiguration {
-
-        @Bean
-        public WrapperResultResponseBodyAdvice.HandlerFilter swaggerFilter() {
-            return returnType -> {
-                Class<?> declaringClass = returnType.getDeclaringClass();
-                return ApiResourceController.class.isAssignableFrom(declaringClass)
-                        || Swagger2Controller.class.isAssignableFrom(declaringClass);
-            };
-        }
-
     }
 }
