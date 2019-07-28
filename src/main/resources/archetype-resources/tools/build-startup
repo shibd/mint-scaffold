@@ -17,7 +17,7 @@ echo APP_PATH:$APP_PATH
 #jps | grep $APP_NAME | awk '{print $1}' | xargs -r kill
 
 # 1. 测试-打包
-mvn clean package
+mvn clean package -Ddocker.build.skip=true
 echo "test and build success, start new process now"
 
 # 2. 启动程序, 下面为一行命令,行与行之间不能有注释,空格

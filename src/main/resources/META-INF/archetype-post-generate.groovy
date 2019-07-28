@@ -30,9 +30,15 @@ setExecutable("/tools/deploy-maven")
 setExecutable("/tools/upgrade-version")
 setExecutable("/tools/mybatis-generator")
 setExecutable("/tools/build-startup")
+setExecutable("/tools/build-startup-docker")
 
 // 运行代码格式化插件
 run("mvn spring-javaformat:apply")
+
+// 运行git init
+run("git init")
+run("git add .")
+run("git commit -m \"init\"")
 
 print "\n" +
         "              _           _   \n" +

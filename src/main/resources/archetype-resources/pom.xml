@@ -21,38 +21,38 @@
         <dependencies>
             <!-- sub modules -->
             <dependency>
-                <groupId>com.dfocus.hello</groupId>
-                <artifactId>hello.application</artifactId>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.application</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.dfocus.hello</groupId>
-                <artifactId>hello.service</artifactId>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.service</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.dfocus.hello</groupId>
-                <artifactId>hello.manager</artifactId>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.manager</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.dfocus.hello</groupId>
-                <artifactId>hello.common</artifactId>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.common</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.dfocus.hello</groupId>
-                <artifactId>hello.integration</artifactId>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.integration</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.dfocus.hello</groupId>
-                <artifactId>hello.facade.api</artifactId>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.facade.api</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
-                <groupId>com.dfocus.hello</groupId>
-                <artifactId>hello.facade.impl</artifactId>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.facade.impl</artifactId>
                 <version>${project.version}</version>
             </dependency>
         </dependencies>
