@@ -12,7 +12,7 @@ then
 fi
 
 # 回到工程目录
-cd `dirname $0`/../common
+cd `dirname $0`/../
 pwd
 
 version=$1
