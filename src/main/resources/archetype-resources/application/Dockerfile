@@ -1,5 +1,5 @@
-#FROM harbor.dfocus.co/library/java:1.8
-FROM java
+FROM harbor.dfocus.co/base/openjdk:8u131
+
 MAINTAINER baozi
 
 ARG JAR_FILE
@@ -7,4 +7,4 @@ ADD ./target/$JAR_FILE app.jar
 
 VOLUME /tmp
 
-ENTRYPOINT ["/usr/bin/java", "-jar", "app.jar"]
+ENTRYPOINT java ${JAVA_OPTS} -jar  app.jar

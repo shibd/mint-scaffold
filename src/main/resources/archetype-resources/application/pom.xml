@@ -12,9 +12,9 @@
 
     <properties>
         <!--docker相关配置-->
-        <docker.build.skip>true</docker.build.skip>
-        <docker.image.registry>harbor.dfocus.co</docker.image.registry>
-        <docker.image.name>${project.artifactId}</docker.image.name>
+        <docker.build.skip>false</docker.build.skip>
+        <docker.image.registry>harbor.dfocus.co/library</docker.image.registry>
+        <docker.image.name>${parent.artifactId}</docker.image.name>
         <docker.image.tag>${project.version}</docker.image.tag>
     </properties>
 
@@ -65,24 +65,7 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
-            <!-- 在打包的时候，生成git.properties文件到jar包中, 方便后续定位版本信息 -->
-            <plugin>
-                <groupId>pl.project13.maven</groupId>
-                <artifactId>git-commit-id-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>get-the-git-infos</id>
-                        <goals>
-                            <goal>revision</goal>
-                        </goals>
-                    </execution>
-                </executions>
-                <configuration>
-                    <dotGitDirectory>${project.basedir}/.git</dotGitDirectory>
-                    <generateGitPropertiesFile>true</generateGitPropertiesFile>
-                </configuration>
-            </plugin>
-            <!-- docker镜像打包插件 -->
+            <!-- docker package -->
             <plugin>
                 <groupId>com.spotify</groupId>
                 <artifactId>dockerfile-maven-plugin</artifactId>
@@ -90,18 +73,18 @@
                 <executions>
                     <execution>
                         <id>application</id>
-                        <goals>
-                            <goal>build</goal>
-                            <goal>push</goal>
-                        </goals>
+                        <!--<goals>-->
+                            <!--<goal>build</goal>-->
+                            <!--<goal>push</goal>-->
+                        <!--</goals>-->
                         <configuration>
                             <dockerfile>./</dockerfile>
                         </configuration>
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>${docker.image.registry}/library/${project.artifactId}</repository>
-                    <tag>${project.version}</tag>
+                    <repository>${docker.image.registry}/${docker.image.name}</repository>
+                    <tag>${docker.image.tag}</tag>
                     <buildArgs>
                         <JAR_FILE>${project.build.finalName}.jar</JAR_FILE>
                     </buildArgs>

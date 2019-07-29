@@ -6,8 +6,8 @@ set -e
 
 # 回到common工程目录
 APP_PATH=$(cd `dirname $0`/../; pwd)
+echo APP_PATH:$APP_PATH
 cd $APP_PATH/common
-echo projectPath:$APP_PATH
 
 mvn exec:java -Dgen.path=$APP_PATH/common
 

@@ -26,11 +26,12 @@ def setExecutable(String fileDir) {
 }
 
 // 设置文件可执行权限
-setExecutable("/tools/deploy-maven")
-setExecutable("/tools/upgrade-version")
+setExecutable("/tools/build-restart")
+setExecutable("/tools/docker-deploy")
+setExecutable("/tools/docker-restart")
+setExecutable("/tools/maven-deploy")
 setExecutable("/tools/mybatis-generator")
-setExecutable("/tools/build-startup")
-setExecutable("/tools/build-startup-docker")
+setExecutable("/tools/upgrade-version")
 
 // 运行代码格式化插件
 run("mvn spring-javaformat:apply")
