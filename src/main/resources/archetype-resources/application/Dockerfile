@@ -7,4 +7,4 @@ ADD ./target/$JAR_FILE app.jar
 
 VOLUME /tmp
 
-ENTRYPOINT java ${JAVA_OPTS} -jar  app.jar
+ENTRYPOINT java ${JAVA_OPTS} -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=1 -XshowSettings:vm -jar  app.jar

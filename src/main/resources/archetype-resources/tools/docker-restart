@@ -26,7 +26,7 @@ docker rm $APP_NAME || true
 docker run \
  -m 500M \
  -e LOG_PATH_ROOT=./logs \
- -e JAVA_OPTS='-XX:+UseParallelOldGC -XX:+UnlockExperimentalVMOptions -XX:+UseCGroupMemoryLimitForHeap -XX:MaxRAMFraction=1 -XshowSettings:vm' \
+ -e JAVA_OPTS='-XX:+UseParallelOldGC' \
  -p 8080:8080 \
  --name $APP_NAME \
  harbor.dfocus.co/library/$APP_NAME:$TAG
