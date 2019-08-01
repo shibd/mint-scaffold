@@ -13,6 +13,7 @@ spring:
     locations: classpath:/db
 
 # kafka test
+kafka.enable: false
 spring.kafka:
   bootstrap-servers: ${spring.embedded.kafka.brokers}
 xxx:
