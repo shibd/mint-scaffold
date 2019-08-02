@@ -1,5 +1,5 @@
 # kafka
-kafka.enable: true
+kafka.enable: false
 spring.kafka:
   bootstrap-servers: localhost:9092
   producer:
