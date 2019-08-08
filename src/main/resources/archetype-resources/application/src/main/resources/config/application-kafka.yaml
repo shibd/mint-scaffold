@@ -16,5 +16,5 @@ spring.kafka:
     value-deserializer: org.apache.kafka.common.serialization.ByteArrayDeserializer
     auto-offset-reset: earliest
 xxx:
-  group: ${projectName}
-  topic: ${projectName}
+  group: xxx-${projectName}
+  topic: xxx-${projectName}

@@ -17,8 +17,8 @@ kafka.enable: false
 spring.kafka:
   bootstrap-servers: ${spring.embedded.kafka.brokers}
 xxx:
-  group: ${projectName}
-  topic: ${projectName}
+  group: xxx-${projectName}
+  topic: xxx-${projectName}
 
 # eureka
 eureka:
