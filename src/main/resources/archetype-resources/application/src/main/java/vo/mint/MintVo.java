@@ -3,7 +3,7 @@ package ${package}.vo.mint;
 import lombok.Data;
 
 /**
- * @Auther: baozi
+ * @Author: baozi
  * @Date: 2019/6/27 10:45
  * @Description:
  */

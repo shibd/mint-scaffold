@@ -4,7 +4,7 @@ import ${package}.facade.model.MintFaReq;
 import ${package}.service.dto.mint.MintDto;
 
 /**
- * @Auther: baozi
+ * @Author: baozi
  * @Date: 2019/6/26 18:36
  * @Description:
  */

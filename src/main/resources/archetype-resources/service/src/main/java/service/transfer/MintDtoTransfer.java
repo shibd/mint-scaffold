@@ -4,7 +4,7 @@ import ${package}.common.entity.Mint;
 import ${package}.service.dto.mint.MintDto;
 
 /**
- * @Auther: baozi
+ * @Author: baozi
  * @Date: 2019/6/25 15:33
  * @Description:
  */

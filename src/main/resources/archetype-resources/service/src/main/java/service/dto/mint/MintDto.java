@@ -6,7 +6,7 @@ import lombok.ToString;
 import javax.validation.constraints.NotEmpty;
 
 /**
- * @Auther: baozi
+ * @Author: baozi
  * @Date: 2019/6/25 11:27
  * @Description:
  */

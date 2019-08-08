@@ -14,7 +14,7 @@ import java.util.concurrent.TimeUnit;
 import org.junit.Assert;
 
 /**
- * @Auther: baozi
+ * @Author: baozi
  * @Date: 2019/7/9 17:24
  * @Description:
  */
