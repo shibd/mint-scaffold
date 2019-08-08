@@ -14,7 +14,6 @@ import java.util.concurrent.CountDownLatch;
  */
 @Slf4j
 @Component
-// todo 脚手架默认生成了下面开关,为了满足应用环境期初没有kafka,以及测试环境需要模拟kafka演示<>当你的应用连接kafka正常后,应去掉该注释!!
 @ConditionalOnProperty(value = "kafka.enable", havingValue = "true")
 public class XXXReceiver {
 
