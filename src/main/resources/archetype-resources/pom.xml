@@ -2,11 +2,11 @@
 <project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
+
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>2.1.6.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
     <groupId>${groupId}</groupId>
@@ -14,83 +14,29 @@
     <version>${version}</version>
     <packaging>pom</packaging>
 
-    <distributionManagement>
-        <snapshotRepository>
-            <id>snapshots</id>
-            <url>http://repo.dfocus.top:8081/repository/maven-snapshots/</url>
-        </snapshotRepository>
-        <repository>
-            <id>releases</id>
-            <url>http://repo.dfocus.top:8081/repository/maven-releases/</url>
-        </repository>
-    </distributionManagement>
-
-
     <properties>
-        <spring.cloud.version>Greenwich.SR2</spring.cloud.version>
+        <!-- common set-->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <java.version>1.8</java.version>
+
         <!-- 下面版本是根据导入的dependencies中获取的,不属于自己组装,只是为了子model统一,在父model中统一再定义一下-->
+        <spring.boot.version>2.1.6.RELEASE</spring.boot.version>
+        <spring.cloud.version>Greenwich.SR2</spring.cloud.version>
         <spring.web.version>5.1.8.RELEASE</spring.web.version>
         <spring.cloud.openfeign.version>2.1.2.RELEASE</spring.cloud.openfeign.version>
         <spring-cloud-sleuth.version>2.1.2.RELEASE</spring-cloud-sleuth.version>
         <spring-data-common.version>2.1.9.RELEASE</spring-data-common.version>
         <spring-cloud-netflixn.version>2.1.2.RELEASE</spring-cloud-netflixn.version>
+
         <!-- other -->
-        <fastjson.version>1.2.4</fastjson.version>
         <mybatis-plus.version>3.1.2</mybatis-plus.version>
         <freemarker.version>2.3.28</freemarker.version>
         <swagger.version>2.6.1</swagger.version>
-        <!-- model版本 -->
-        <aplication.version>${version}</aplication.version>
-        <service.version>${version}</service.version>
-        <manager.version>${version}</manager.version>
-        <common.version>${version}</common.version>
-        <integration.version>${version}</integration.version>
-        <facade.api.version>${version}</facade.api.version>
-        <facade.impl.version>${version}</facade.impl.version>
-        <!--dfocus sdk-->
-        <mint.web.version>1.0</mint.web.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- sub modules -->
-            <dependency>
-                <groupId>${groupId}</groupId>
-                <artifactId>${artifactId}.application</artifactId>
-                <version>${application.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}</groupId>
-                <artifactId>${artifactId}.service</artifactId>
-                <version>${service.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}</groupId>
-                <artifactId>${artifactId}.manager</artifactId>
-                <version>${manager.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}</groupId>
-                <artifactId>${artifactId}.common</artifactId>
-                <version>${common.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}</groupId>
-                <artifactId>${artifactId}.integration</artifactId>
-                <version>${integration.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}</groupId>
-                <artifactId>${artifactId}.facade.api</artifactId>
-                <version>${facade.api.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>${groupId}</groupId>
-                <artifactId>${artifactId}.facade.impl</artifactId>
-                <version>${facade.impl.version}</version>
-            </dependency>
-
-
             <!--import spring cloud-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -99,6 +45,7 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+
             <!-- 为了统一,统一声明-->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
@@ -131,13 +78,6 @@
                 <version>${spring-data-common.version}</version>
             </dependency>
 
-            <!--工具包-->
-            <dependency>
-                <groupId>com.alibaba</groupId>
-                <artifactId>fastjson</artifactId>
-                <version>${fastjson.version}</version>
-            </dependency>
-
             <!-- mybatis-plus-starter -->
             <dependency>
                 <groupId>com.baomidou</groupId>
@@ -167,13 +107,78 @@
                 <version>${swagger.version}</version>
             </dependency>
 
-            <!--dfocus-->
+            <!-- sub modules -->
             <dependency>
-                <groupId>com.dfocus.mint</groupId>
-                <artifactId>mint-web</artifactId>
-                <version>${mint.web.version}</version>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.application</artifactId>
+                <version>${project.version}</version>
             </dependency>
-
+            <dependency>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.service</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.manager</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.common</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.integration</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.facade.api</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>${groupId}</groupId>
+                <artifactId>${artifactId}.facade.impl</artifactId>
+                <version>${project.version}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.spotify</groupId>
+                    <artifactId>dockerfile-maven-plugin</artifactId>
+                    <version>1.4.10</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+
+        <plugins>
+            <!--git记录commit插件-->
+            <plugin>
+                <groupId>pl.project13.maven</groupId>
+                <artifactId>git-commit-id-plugin</artifactId>
+            </plugin>
+            <!--代码格式化插件-->
+            <plugin>
+                <groupId>io.spring.javaformat</groupId>
+                <artifactId>spring-javaformat-maven-plugin</artifactId>
+                <version>0.0.15</version>
+                <executions>
+                    <execution>
+                        <phase>validate</phase>
+                        <inherited>true</inherited>
+                        <goals>
+                            <goal>validate</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
 </project>

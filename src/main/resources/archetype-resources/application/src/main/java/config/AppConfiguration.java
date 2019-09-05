@@ -5,11 +5,16 @@ import org.springframework.boot.autoconfigure.condition.ConditionalOnProperty;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Bean;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import springfox.documentation.builders.PathSelectors;
+import springfox.documentation.builders.RequestHandlerSelectors;
+import springfox.documentation.spi.DocumentationType;
+import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
 /**
- * @Auther: baozi
+ * @Author: baozi
  * @Date: 2019/6/23 17:28
  * @Description:
  */
@@ -32,5 +37,16 @@ public class AppConfiguration {
     @Configuration
     @EnableScheduling
     public static class SchedulingConfiguration {
+    }
+
+    /**
+     * swagger配置
+     * @return
+     */
+    @Bean
+    public Docket createRestApi() {
+        return new Docket(DocumentationType.SWAGGER_2).select()
+                .apis(RequestHandlerSelectors.basePackage("${package}.controller")).paths(PathSelectors.any())
+                .build();
     }
 }

@@ -11,7 +11,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 import java.util.List;
 
 /**
- * @Auther: baozi
+ * @Author: baozi
  * @Date: 2019/6/25 14:57
  * @Description:
  */

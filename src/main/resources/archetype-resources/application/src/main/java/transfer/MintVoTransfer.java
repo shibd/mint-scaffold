@@ -4,7 +4,7 @@ import ${package}.service.dto.mint.MintDto;
 import ${package}.vo.mint.MintVo;
 
 /**
- * @Auther: baozi
+ * @Author: baozi
  * @Date: 2019/6/27 11:01
  * @Description:
  */

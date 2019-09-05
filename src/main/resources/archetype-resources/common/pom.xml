@@ -11,6 +11,10 @@
 
     <artifactId>${rootArtifactId}.common</artifactId>
 
+    <properties>
+        <gen.path></gen.path>
+    </properties>
+
     <dependencies>
 
         <!--mybatis-plus-->
@@ -50,10 +54,6 @@
 
         <!-- 公共 -->
         <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-        </dependency>
-        <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
@@ -77,6 +77,23 @@
         </dependency>
 
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>${package}.common.CodeGenerator</mainClass>
+                    <arguments>
+                        <argument>${gen.path}</argument>
+                    </arguments>
+                    <classpathScope>test</classpathScope>
+                    <cleanupDaemonThreads>false</cleanupDaemonThreads>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 
 </project>

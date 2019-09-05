@@ -3,7 +3,7 @@ package ${package}.service.dto.mint;
 import lombok.Data;
 
 /**
- * @Auther: baozi
+ * @Author: baozi
  * @Date: 2019/6/27 11:14
  * @Description:
  */

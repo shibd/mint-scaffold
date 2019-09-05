@@ -6,7 +6,6 @@ import ${package}.service.compose.XXXComposeService;
 import ${package}.service.compose.impl.XXXComposeServiceImpl;
 import ${package}.service.dto.mint.SearchMint;
 import ${package}.service.dto.mint.MintDto;
-import com.alibaba.fastjson.JSONObject;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -18,7 +17,7 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * @Auther: baozi
+ * @Author: baozi
  * @Date: 2019/7/11 09:49
  * @Description:
  * 第一种测试,没有结合spring容器
@@ -51,7 +50,7 @@ public class XXXComposeServiceMockTest1 extends ${classPrefix}ApplicationTests {
     @Test
     public void testXXXMockTest() {
         List<MintDto> mints = xxxComposeService.testComposeSearchMint(searchMint);
-        System.out.println(JSONObject.toJSONString(mints));
+        System.out.println(mints);
         Assert.assertTrue(mints.size() == 1);
         Assert.assertTrue(mints.get(0).getAccount().equals("mock1-account"));
     }
