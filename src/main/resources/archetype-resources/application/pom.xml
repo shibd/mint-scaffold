@@ -13,7 +13,7 @@
     <properties>
         <!--docker相关配置-->
         <docker.build.skip>false</docker.build.skip>
-        <docker.image.registry>harbor.dfocus.co/library</docker.image.registry>
+        <docker.image.registry>you.repository.co/library</docker.image.registry>
         <docker.image.name>${parent.artifactId}</docker.image.name>
         <docker.image.tag>${project.version}</docker.image.tag>
     </properties>

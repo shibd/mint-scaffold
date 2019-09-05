@@ -7,7 +7,6 @@
 // import ${package}.service.dto.mint.MintDto;
 // import ${package}.service.common.exception.BizException;
 // import ${package}.service.common.constant.ResultCode;
-// import com.dfocus.mint.web.rsp.Response;
 // import org.springframework.beans.factory.annotation.Autowired;
 // import org.springframework.web.bind.annotation.RequestBody;
 // import org.springframework.web.bind.annotation.RestController;

@@ -1,7 +1,6 @@
 // package ${package}.facade.api;
 //
 // import ${package}.facade.model.MintFaReq;
-// import com.dfocus.mint.web.rsp.Response;
 // import org.springframework.web.bind.annotation.RequestBody;
 // import org.springframework.web.bind.annotation.RequestMapping;
 // import org.springframework.web.bind.annotation.RequestMethod;

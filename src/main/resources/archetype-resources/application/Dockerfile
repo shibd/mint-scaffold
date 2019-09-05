@@ -1,4 +1,4 @@
-FROM harbor.dfocus.co/base/openjdk:8u131
+FROM jdk
 
 MAINTAINER baozi
 
