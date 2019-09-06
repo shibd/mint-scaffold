@@ -1,7 +1,7 @@
 # mint-scaffold
 Spring Boot快速开发脚手架
 
-相关文档请移步：[wiki](https://www.yuque.com/docs/share/52308ccf-8450-46bf-8af9-f278ebc33248)
+相关文档请移步：[wiki](https://github.com/shibd/mint-scaffold/wiki)
 
 # 快速入门
 1. 使用下述命令快速生成一个开发脚手架，-DgroupId和-DartifactId自己根据项目自定义。
