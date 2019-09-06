@@ -33,6 +33,7 @@
         <mybatis-plus.version>3.1.2</mybatis-plus.version>
         <freemarker.version>2.3.28</freemarker.version>
         <swagger.version>2.6.1</swagger.version>
+        <mint.version>2.0-SNAPSHOT</mint.version>
     </properties>
 
     <dependencyManagement>
@@ -105,6 +106,13 @@
                 <groupId>io.springfox</groupId>
                 <artifactId>springfox-swagger-ui</artifactId>
                 <version>${swagger.version}</version>
+            </dependency>
+
+            <!--other-->
+            <dependency>
+                <groupId>com.baozi.archetypes</groupId>
+                <artifactId>mint-scaffold</artifactId>
+                <version>${mint.version}</version>
             </dependency>
 
             <!-- sub modules -->

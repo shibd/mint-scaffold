@@ -5,7 +5,7 @@ import ${package}.service.dto.mint.SearchMint;
 import ${package}.service.dto.mint.MintDto;
 import ${package}.transfer.MintVoTransfer;
 import ${package}.vo.mint.MintVo;
-import ${package}.vo.base.Response;
+import com.baozi.mint.web.rsp.Response;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.data.domain.Page;

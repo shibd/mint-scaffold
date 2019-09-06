@@ -10,7 +10,6 @@ import ${package}.service.dto.mint.MintDto;
  */
 public abstract class MintFaTransfer {
 
-
     public static MintDto faReqToDto(MintFaReq mintFaReq) {
         MintDto mintDto = new MintDto();
         mintDto.setAccount(mintFaReq.getAccount());
