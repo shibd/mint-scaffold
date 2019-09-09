@@ -1,5 +1,5 @@
 # mint-scaffold
-Spring Boot快速开发脚手架
+Java开发脚手架，快速生成一个Spring Boot工程。默认集成SpringBoot，Cloud，Kafka，内存数据库，MybatisPlus，Docker，单元测试方案等。
 
 相关文档请移步：[wiki](https://github.com/shibd/mint-scaffold/wiki)
 
