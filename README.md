@@ -38,7 +38,7 @@ sh hello/tools/build-restart
 
 ## LICENSE
 
-[MIT License](https://raw.githubusercontent.com/DFocusFE/socket.io.java.client.biz/master/LICENSE)
+[MIT License](https://raw.githubusercontent.com/shibd/mint-scaffold/master/LICENSE)
 
-[license-url]: https://img.shields.io/github/license/dfocusfe/socket.io.java.client.biz
+[license-url]: https://img.shields.io/github/license/shibd/mint-scaffold
 
