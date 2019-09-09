@@ -3,31 +3,33 @@ Spring Boot快速开发脚手架
 
 相关文档请移步：[wiki](https://github.com/shibd/mint-scaffold/wiki)
 
+# Features
+- 微服务化
+- 模块分治
+- 最佳集成
+- 统一技术栈
+- 容器集成
+- 规范单元测试
+
 # 快速入门
-1. 使用下述命令快速生成一个开发脚手架，-DgroupId和-DartifactId自己根据项目自定义。
+1. 配置好Maven, 确保可以使用`mvn`命令。
+2. 使用下述命令快速生成一个工程，-DgroupId和-DartifactId自己根据项目自定义。（-DartifactId为工程名，建议格式小写 xxx-xxx，不建议大小写驼峰）
 ```
-mvn -e archetype:generate \
- -DarchetypeGroupId=com.baozi.archetypes \
+mvn archetype:generate \
+ -DarchetypeGroupId=io.github.shibd \
  -DarchetypeArtifactId=mint-scaffold \
- -DarchetypeVersion=3.2-SNAPSHOT \
+ -DarchetypeVersion=1.0-SNAPSHOT \
  -Dversion=1.0-SNAPSHOT \
  -DgroupId=com.baozi.hello \
  -DartifactId=hello \
- -DinteractiveMode=false
+ -DinteractiveMode=falsee
 ```
+3. 启动工程:
+```
+sh hello/tools/build-restart
+```
+4. 访问swagger测试: http://127.0.0.1:8080/hello/swagger-ui.html
+5. 访问h2-console查看数据: http://127.0.0.1:8080/hello/h2-console/
+- logback默认日志在 ./log/default-app.log，请自定义修改，在application/resource/xml修改logback.xml的LOG_APP_NAME和LOG_PATH_ROOT值
 
-# 版本Release
-- 引入mybatis-plus
-- 增加格式化代码插件
-- 更换maven父包
-- 优化工程代码使用规范
-- 引入Docker,重构工程脚本
-- 引入XXJob
-- 微服务打通注册中心(ribbon,eureka)
-- 完善单元测试写法
-- 规范logback
-- 引入内存kafka,完善对kafka使用测试
-- 修改demo表名
-- 集成统一脚本
-- 完善接口测试
-- 完善单元测试流程
+
