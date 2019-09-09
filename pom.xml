@@ -3,9 +3,9 @@
          xmlns="http://maven.apache.org/POM/4.0.0"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.baozi.archetypes</groupId>
+    <groupId>io.github.shibd</groupId>
     <artifactId>mint-scaffold</artifactId>
-    <version>3.2.3-SNAPSHOT</version>
+    <version>1.0-SNAPSHOT</version>
     <name>mint spring boot multi module project archetype</name>
 
     <properties>
@@ -29,12 +29,12 @@
 
     <distributionManagement>
         <snapshotRepository>
-            <id>snapshots</id>
-            <url>http://repo.dfocus.top:8081/repository/maven-snapshots/</url>
+            <id>myself</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
         </snapshotRepository>
         <repository>
-            <id>releases</id>
-            <url>http://repo.dfocus.top:8081/repository/maven-releases/</url>
+            <id>myself</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
         </repository>
     </distributionManagement>
 

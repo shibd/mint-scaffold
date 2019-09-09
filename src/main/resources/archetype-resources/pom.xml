@@ -33,7 +33,7 @@
         <mybatis-plus.version>3.1.2</mybatis-plus.version>
         <freemarker.version>2.3.28</freemarker.version>
         <swagger.version>2.6.1</swagger.version>
-        <mint.version>2.0-SNAPSHOT</mint.version>
+        <mint.version>1.0-SNAPSHOT</mint.version>
     </properties>
 
     <dependencyManagement>
@@ -110,7 +110,7 @@
 
             <!--other-->
             <dependency>
-                <groupId>com.baozi.archetypes</groupId>
+                <groupId>io.github.shibd</groupId>
                 <artifactId>mint-scaffold</artifactId>
                 <version>${mint.version}</version>
             </dependency>
