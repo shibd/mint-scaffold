@@ -14,7 +14,7 @@ Java开发脚手架，快速生成一个Spring Boot工程。默认集成SpringBo
 - 容器集成
 - 规范单元测试
 
-## 快速入门
+## 快速使用
 1. 配置好Maven, 确保可以使用`mvn`命令。
 2. 使用下述命令快速生成一个工程，-DgroupId和-DartifactId自己根据项目自定义。（-DartifactId为工程名，建议格式小写 xxx-xxx，不建议大小写驼峰）
 ```
@@ -35,4 +35,10 @@ sh hello/tools/build-restart
 5. 访问h2-console查看数据: http://127.0.0.1:8080/hello/h2-console/
 - logback默认日志在 ./log/default-app.log，请自定义修改，在application/resource/xml修改logback.xml的LOG_APP_NAME和LOG_PATH_ROOT值
 
+
+## LICENSE
+
+[MIT License](https://raw.githubusercontent.com/DFocusFE/socket.io.java.client.biz/master/LICENSE)
+
+[license-url]: https://img.shields.io/github/license/dfocusfe/socket.io.java.client.biz
 
