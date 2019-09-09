@@ -1,9 +1,10 @@
 # mint-scaffold
+![][license-url]
 Java开发脚手架，快速生成一个Spring Boot工程。默认集成SpringBoot，Cloud，Kafka，内存数据库，MybatisPlus，Docker，单元测试方案等。
 
 相关文档请移步：[wiki](https://github.com/shibd/mint-scaffold/wiki)
 
-# Features
+## Features
 - 微服务化
 - 模块分治
 - 最佳集成
@@ -11,7 +12,7 @@ Java开发脚手架，快速生成一个Spring Boot工程。默认集成SpringBo
 - 容器集成
 - 规范单元测试
 
-# 快速入门
+## 快速入门
 1. 配置好Maven, 确保可以使用`mvn`命令。
 2. 使用下述命令快速生成一个工程，-DgroupId和-DartifactId自己根据项目自定义。（-DartifactId为工程名，建议格式小写 xxx-xxx，不建议大小写驼峰）
 ```
