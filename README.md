@@ -15,7 +15,12 @@ Java开发脚手架，快速生成一个Spring Boot工程。默认集成SpringBo
 - 规范单元测试
 
 ## 快速使用
-1. 配置好Maven, 确保可以使用`mvn`命令。
+1. 配置好Maven, 确保可以使用`mvn`命令，安装包到本地
+``` shell
+git clone https://github.com/shibd/mint-scaffold.git
+cd mint-scaffold
+mvn clean install
+```
 2. 使用下述命令快速生成一个工程，-DgroupId和-DartifactId自己根据项目自定义。（-DartifactId为工程名，建议格式小写 xxx-xxx，不建议大小写驼峰）
 ```
 mvn archetype:generate \
