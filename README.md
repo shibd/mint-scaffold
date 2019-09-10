@@ -30,7 +30,7 @@ mvn archetype:generate \
  -Dversion=1.0-SNAPSHOT \
  -DgroupId=com.baozi.hello \
  -DartifactId=hello \
- -DinteractiveMode=falsee
+ -DinteractiveMode=false
 ```
 3. 启动工程:
 ```
