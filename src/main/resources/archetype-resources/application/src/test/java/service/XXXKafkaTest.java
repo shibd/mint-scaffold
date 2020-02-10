@@ -29,13 +29,13 @@ public class XXXKafkaTest extends ${classPrefix}ApplicationTests {
     @Autowired
     private XXXSender sender;
 
-    @Test
-    public void testReceive() throws Exception {
-        sender.send("Hello Spring Kafka!");
-
-        receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
-        Assert.assertEquals(receiver.getLatch().getCount(), 0);
-    }
+//    @Test
+//    public void testReceive() throws Exception {
+//        sender.send("Hello Spring Kafka!");
+//
+//        receiver.getLatch().await(10000, TimeUnit.MILLISECONDS);
+//        Assert.assertEquals(receiver.getLatch().getCount(), 0);
+//    }
 
 
     /**
